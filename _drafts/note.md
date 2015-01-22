@@ -10,6 +10,8 @@
 - ruby on rails
 - pthon django
 
+- angular js
+
 #nodejs
 
 语言分类：[知乎，语言的分类](http://www.zhihu.com/question/20124038)
