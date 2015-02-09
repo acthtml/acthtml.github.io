@@ -3,38 +3,51 @@ layout: post
 title:  "polymer note"
 ---
 
-创建元素
+- polymer库
+- 平台polyfills
 
-1. polymer.html
+bower 安装
+
+    bower init
+    bower install --save Polymer/polymer
+    bower update
+
+
+使用elements
+
+- platform.js
+  - web components APIs
+  - polyfill
+  - HTML Import
+- polymer-ready
+
+
+创建elements
+
+1. load Polymer core(polymer.html)
 2. <polymer-element>
-  - shadow dom
   - name
   - noscript
-3. lifecycle callbacks
+3. lifecycle methos
   - created()
   - ready()
-4. watches
-  - changed
-5. public 属性
-6. publishing 属性
-7. this.$
 
-platform.js
+创建可复用的elements，并发布在github上。(http://docs.polymerchina.org/docs/start/reusableelements.html)
 
-- web components
-  - shadow dom
-  - html imports
-  - custom elements
-- dom
+
+The Platform
+
+- Web Components
+  - Shadow DOM
+  - HTML Imports
+  - Custom Elements
+- DOM
   - URL
   - WeakMap
-  - Mutation Observers
-  - observe-js
-- 其他
-  - web animations
+  - Mutatioin Observers
+  - observe.js
+- Others
+  - Web Animations
 
-
-其他资源：
-
-- [创建demo，生成JSDoc，部署到github的gh-page分支](http://docs.polymerchina.org/docs/start/reusableelements.html)
-- [工具&测试](http://docs.polymerchina.org/resources/tooling-strategy.html)
+[工具 & 测试](http://docs.polymerchina.org/resources/tooling-strategy.html)
+[js source map详解](http://www.ruanyifeng.com/blog/2013/01/javascript_source_map.html)
