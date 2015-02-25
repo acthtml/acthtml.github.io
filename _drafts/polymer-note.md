@@ -53,6 +53,7 @@ title:  "polymer note"
 - HTML imports
 - web animations
 - polyfills
+- templates
 
 ## 关于自定义元素
 
@@ -61,7 +62,6 @@ title:  "polymer note"
 - 自定义一个元素
   document.registerElement
 - 安装一个polymer元素
-
 - 扩展已有元素
 - 元素的类型：UI和非UI
 
