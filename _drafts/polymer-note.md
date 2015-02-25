@@ -2,52 +2,73 @@
 layout: post
 title:  "polymer note"
 ---
+# 理解 Polymer
 
-- polymer库
-- 平台polyfills
+# 理解 web components
 
-bower 安装
+## 关于 custom elements
 
-    bower init
-    bower install --save Polymer/polymer
-    bower update
+document.registerElement()
+
+http://webcomponents.org/
+http://w3c.github.io/webcomponents/spec/custom/
+http://customelements.io/
+
+## 关于 shadow DOM
+
+createShadowRoot()
+
+- Light DOM
+- Shadow DOM
+- Composed DOM
+
+## 关于 HTML imports
+
+## 关于 web animations
+
+- Animations
+- AnimationEffects
+- TimingDictionaries
+- TimingGroups
+- AnimationPlayers
+
+# 开发API
+
+## 开发概述
+
+### 元素声明
+
+attributes
+
+### 元素的生命周期函数
+
+- createdCallback
+  - created
+  - ready
+- attachedCallback
+  - attached
+  - domReady
+- detachedCallback
+  - detached
+- attributeChangedCallback
+  - attributeChanged
+
+### 其他相关
+
+- this.super() // extends时，使用父辈元素的方法。
+- this.onMutation(domElement, someCallback) // 当domElement的children改变时，调用回调函数
+- this.async() // 等同于window.setTimeout()，但是this指向当前元素并且
+- this.job() // 单位时间内多次出发只出发一次。
+
+- this.cancelUnbindAll()
+- this.preventDispose = true;
+
+- 监控数据变化
+  Object.observe() 和 Platform.flush();
+
+- this.alwaysPrepare = true
+
+- this.resolvePath('x-foo.png') === 'components/x-foo/x-foo.png'
 
 
-使用elements
-
-- platform.js
-  - web components APIs
-  - polyfill
-  - HTML Import
-- polymer-ready
-
-
-创建elements
-
-1. load Polymer core(polymer.html)
-2. <polymer-element>
-  - name
-  - noscript
-3. lifecycle methos
-  - created()
-  - ready()
-
-创建可复用的elements，并发布在github上。(http://docs.polymerchina.org/docs/start/reusableelements.html)
-
-
-The Platform
-
-- Web Components
-  - Shadow DOM
-  - HTML Imports
-  - Custom Elements
-- DOM
-  - URL
-  - WeakMap
-  - Mutatioin Observers
-  - observe.js
-- Others
-  - Web Animations
-
-[工具 & 测试](http://docs.polymerchina.org/resources/tooling-strategy.html)
-[js source map详解](http://www.ruanyifeng.com/blog/2013/01/javascript_source_map.html)
+## 数据绑定
