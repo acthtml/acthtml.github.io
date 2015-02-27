@@ -237,7 +237,7 @@ attributes: name,attributes,extends,noscript,constructor
 - [unresolved]
 - [resolved]
 
-    polyfill-next-selector { content: ':host > *' }
+    polyfill-next-selector { conte\nt: ':host > *' }
     ::content > * { }
 
     // polyfill-rule
@@ -270,3 +270,32 @@ attributes: name,attributes,extends,noscript,constructor
   - trackstart, track, trackend
   - hold, holdpulse
   - release
+
+# elements
+
+## elements guides
+
+### layout elements
+
+- core-header-panel
+- core-toolbar
+- core-drawer-panel
+- core-scaffold
+
+### flex box
+
+- flex-direction // 定义主轴方向
+  - row, row-reverse
+  - column, column-reverse
+- justify-content // 定义子元素如何在主轴排列
+  - flex-start, flex-end
+  - center
+  - space-between, space-around
+- align-items // 定义子元素入如何沿着侧轴排列
+- align-self // 覆盖父元素的align-items，单独定义该元素如何沿着侧轴排列。
+
+### material design spec
+
+- baseline grids
+- keylines
+- touch target size
