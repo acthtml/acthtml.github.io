@@ -305,3 +305,6 @@ attributes: name,attributes,extends,noscript,constructor
 
 - core-a11y-keys
 - core-ajax, core-xhr
+- core-meta
+
+core-meta
