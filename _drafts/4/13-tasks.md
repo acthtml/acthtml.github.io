@@ -100,3 +100,22 @@ ten_weekend_ticket.js => ten_weekend_ticket.1.1.js
 
 列表页，终页
 favorite_line.js 刷新
+
+
+周总结：
+
+# 1. 本周工作内容与工作进度总结
+
+周末卡改版，新的前端框架polymer。
+
+# 2.本周工作中遇到的问题
+
+没给组员任务的deadline的话会拖延，下周标注deadline
+
+# 3.本周收获
+
+完成任务会给组员适当激励。
+
+# 4.下周计划
+
+列下前端的学习架构，并且督促组员学习。
