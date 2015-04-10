@@ -72,3 +72,22 @@
 共享继承样式，提供样式双向绑定的能力
 
     <core-style></core-style>
+
+## core-animation, core-animation-keyframe, core-animation-prop, core-animation-group
+
+用标签元素来写动画
+
+    <core-animation id="fadeout" duration="500">
+      <core-animation-keyframe>
+        <core-animation-prop name="opacity" value="1"></core-animation-prop>
+      </core-animation-keyframe>
+      <core-animation-keyframe>
+        <core-animation-prop name="opacity" value="0"></core-animation-prop>
+      </core-animation-keyframe>
+    </core-animation>
+    <script>
+      var animation = document.querySelector('#fadeout'),
+          animation.target =  document.querySelector('#target');
+
+      animation.play();
+    </script>
