@@ -1,6 +1,8 @@
 ---
 layout: post
 title:  "电车问题"
+date:   2015-01-20 22:05:45
+categories: jekyll update
 ---
 
 今天早上碰到一起车祸，想到了电车问题，然后在晨会上分享讨论了下。
