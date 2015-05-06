@@ -6,6 +6,8 @@ permalink: /about/
 
 dai hua
 
+front end developer
+
 life@Suzhou
 
 work@ly.com
