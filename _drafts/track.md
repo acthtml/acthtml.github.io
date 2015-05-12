@@ -53,3 +53,6 @@ http://172.16.2.38/hybrid/?p=236
 
   window._tc_bridge_util && window._tc_bridge_util.set_page(params);
 })();
+
+
+http://shouji.17u.cn/internal/share/weixin
