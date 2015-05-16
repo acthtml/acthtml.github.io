@@ -177,7 +177,7 @@ title:  "js代码风格指南"
     };
   }
   // 这里即使没有使用elme，闭包也保留着elem，a的引用，由于elem也保留着闭包的引用，这就产生
-  循环引用，无法被垃圾回收机制（garbage collection）回收，这种情况可以用下面这种形式重构。
+  // 循环引用，无法被垃圾回收机制（garbage collection）回收，这种情况可以用下面这种形式重构。
 
   function foo(element, a, b) {
     element.onclick = bar(a, b);
