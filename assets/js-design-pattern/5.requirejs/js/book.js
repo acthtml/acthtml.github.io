@@ -21,6 +21,14 @@
   })
 
   require(['jquery', 'app/book'], function($, book){
+    $('.hotel input').on('change', function(){
+      book.setHotelDate($(this).val());
+    })
+
+    $('.scenery input').on('change', function(){
+      book.setSceneryDate($(this).val());
+    })
+
     // submit
     $('.submit').on('click', book.submit)
   })
