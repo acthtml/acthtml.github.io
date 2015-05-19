@@ -121,8 +121,26 @@
     },
     // 提交
     submit : function(){
-      // 将上述配置信息ajax提交
-      console.log(settings);
+      var errors = [];
+
+      if(!settings.hotel.date){
+        errors.push('请填写酒店入住日期');
+      }
+      if(!settings.scenery.date){
+        errors.push('请填写景点游玩日期');
+      }
+
+      if(errors.length){
+        alert(errors.join('\n'));
+        return;
+      }
+
+      // 验证通过提交。
+      alert('已提交订单' + JSON.stringify({
+        id : settings.id,
+        hotel : settings.hotel.date,
+        scenery : settings.scenery.date
+      }));
     }
   };
 
