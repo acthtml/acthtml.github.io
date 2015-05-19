@@ -1,39 +1,38 @@
 // 字面量模式的下单页
 ;(function($, window, document, undefined){
 
-  var settings = {
-    // 套餐id
-    id : 1000,
-    // 套餐份数
-    count : 1,
-    // 酒店
-    hotel : {
-      // 入住日期
-      date : '',
-      // 一份几间
+  var book = (function(){
+    var settings = {
+      // 套餐id
+      id : 1000,
+      // 套餐份数
       count : 1,
-      // 一间多少钱
-      price : 0
-    },
-    // 景点
-    scenery : {
-      // 出游日期
-      date : '',
-      // 一份多少张
-      count : 2,
-      // 一张多少钱
-      price : 0
-    },
-    // 适用人数
-    people : {
-      // 成人
-      adult : 2,
-      // 儿童
-      children : 1
-    }
-  };
-
-  var book = (function(settings){
+      // 酒店
+      hotel : {
+        // 入住日期
+        date : '',
+        // 一份几间
+        count : 1,
+        // 一间多少钱
+        price : 0
+      },
+      // 景点
+      scenery : {
+        // 出游日期
+        date : '',
+        // 一份多少张
+        count : 2,
+        // 一张多少钱
+        price : 0
+      },
+      // 适用人数
+      people : {
+        // 成人
+        adult : 2,
+        // 儿童
+        children : 1
+      }
+    };
 
     // 根据日期得到价格。
     function getPriceByDate(date){
@@ -93,8 +92,10 @@
         console.log(settings);
       }
     };
-  })(settings);
+  })();
 
   // do other things
+  // eg. submit
+  $('.submit').on('click', book.submit);
 
 })(jQuery, window, document);

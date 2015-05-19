@@ -33,7 +33,7 @@
     }
   };
 
-  var page = {
+  var book = {
     init : function(){
       this.wrapper = $('.page');
 
@@ -125,5 +125,5 @@
     }
   };
 
-  page.init();
+  book.init();
 })(jQuery, window, document);

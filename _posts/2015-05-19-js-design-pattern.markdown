@@ -37,6 +37,8 @@ Page.init();
 
 {% endhighlight %}
 
+[字面量模式demo](/assets/js-design-pattern/1.literal/book.html)
+
 ### 构造器模式（Construct Pattern）
 
 js通过构造器函数可以实现类这个概念，并且通过``new``这个关键词，可以实例化对象。
@@ -130,6 +132,7 @@ var testModule = (function(){
 上面这种通过匿名自运行函数屏蔽代码的作用域，并且通过闭包函数来访问局部变量的做法
 很典型。
 
+[模块模式demo](/assets/js-design-pattern/3.module/book.html)
 
 ### 发布订阅模式（Publish/Subscribe Pattern）
 
@@ -192,6 +195,8 @@ $.publish('foo', [7, 8]);
 
 {% endhighlight %}
 
+[发布订阅模式demo](/assets/js-design-pattern/4.pubsub/book.html)
+
 ### AMD模式
 
 在更复杂的场景中，我们需要模块按需加载，并且需要模块自己负责处理依赖。
@@ -223,6 +228,4 @@ require('jquery', function($){
 
 {% endhighlight %}
 
-
-[underscore](http://www.css88.com/doc/underscore/)
-[backbone](http://www.css88.com/doc/backbone/)
+[AMD模式demo](/assets/js-design-pattern/5.requirejs/book.html)
