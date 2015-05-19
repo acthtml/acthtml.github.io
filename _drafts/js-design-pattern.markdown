@@ -192,8 +192,37 @@ $.publish('foo', [7, 8]);
 
 {% endhighlight %}
 
+### AMD模式
 
-### MVC模式
+在更复杂的场景中，我们需要模块按需加载，并且需要模块自己负责处理依赖。
+
+所以我们很容易想到用下面这种方式来定义和加载模块。
+
+{% highlight javascript %}
+
+// 定义模块
+define(
+  [module_id],
+  [dependence_module_a, dependence_module_b],
+  function(module_a, module_b){
+    // do something with module_a, module_b
+
+    // exports
+    return {
+      name : 'name',
+      get : function(){
+        module_a.get();
+      }
+    }
+  }
+)
+
+require('jquery', function($){
+  // do thing with $.
+})
+
+{% endhighlight %}
+
 
 [underscore](http://www.css88.com/doc/underscore/)
 [backbone](http://www.css88.com/doc/backbone/)

@@ -20,7 +20,7 @@ title:  "浏览器基本原理"
 7. 数据存数。管理需要的本地存储方案例如cookie。html5还定义了一些web数据库，也在这
   里帮你实现。
 
-![浏览器基础架构](/images/the-base-of-brower/brower-architecture.png)
+![浏览器基础架构](/assets/the-base-of-brower/brower-architecture.png)
 
 ## 渲染引擎
 

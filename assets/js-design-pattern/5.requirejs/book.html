@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>下单页</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/book.css">
+</head>
+<body>
+  <div class="page">
+    <h1>苏州一日自助游</h1>
+    <label class="count">
+      <span>份数</span>
+      <input type="number" value="1" min="1" max="20" data-type="count">
+    </label>
+    <label class="hotel">
+      <span>甪直大酒店</span>
+      <em>1间</em>
+      <input type="date" data-type="hotel">
+    </label>
+    <label class="scenery">
+      <span>甪直门票</span>
+      <em>2张</em>
+      <input type="date" data-type="scenery">
+    </label>
+
+    <div class="total">
+      <div class="inner">
+        <h3>可出游人数：<span>2</span>成人 <span>1</span>儿童</h3>
+        <div class="price">
+          总价：<strong>&yen;<span>200</span></strong>
+        </div>
+        <a class="submit">提交</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/lib/jquery.js"></script>
+  <script src="js/lib/ba-tiny-pubsub.js"></script>
+  <script src="js/book.js"></script>
+</body>
+</html>

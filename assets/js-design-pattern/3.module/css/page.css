@@ -1,0 +1,12 @@
+html{background: #fff;}
+.page{max-width: 600px;margin: 0 auto;position: relative;}
+
+h1{line-height: 40px; padding: 0 10px; font-weight: 700;}
+label{ display: block; height: 40px;line-height: 40px; text-align: right;padding: 0 10px; border-top: 1px solid #ddd;}
+label span{float: left;}
+label input{background: #fff;border: 1px solid #ddd; text-align: right;}
+
+.total{position:fixed; bottom: 0; width: 100%; left: 0;}
+.total .inner{max-width: 600px; margin: 0 auto; border-top: 1px solid #ddd; padding: 10px;}
+
+.submit{background:#50b400; color: #fff; height: 40px; line-height: 40px; text-align: center; display: block; border: none; border-radius: 5px;}
