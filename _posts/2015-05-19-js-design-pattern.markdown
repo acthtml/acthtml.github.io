@@ -229,3 +229,8 @@ require('jquery', function($){
 {% endhighlight %}
 
 [AMD模式demo](/assets/js-design-pattern/5.requirejs/book.html)
+
+参考文档：
+
+- [javascript design pattern](http://addyosmani.com/resources/essentialjsdesignpatterns/book/)
+- [requirejs](http://requirejs.cn/)
