@@ -5,11 +5,10 @@
  */
 
 (function(){
-
   // 配置项
   require.config({
     // 基准配置项，模块js的路径都是相对基准路径的
-    baseUrl : 'js/lib',
+    baseUrl : 'js/lib/',
     // 不在基准目录下的可以用下面这种方式，例如以“app”开头的模块在基准目录的../app下。
     paths :{
       'app' : '../app'
@@ -30,6 +29,6 @@
     })
 
     // submit
-    $('.submit').on('click', book.submit)
+    $('.submit').on('click', book.submit);
   })
 })();

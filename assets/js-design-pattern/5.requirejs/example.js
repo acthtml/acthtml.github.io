@@ -1,13 +1,12 @@
 // AMD 模式
 
-
 // A.1 定义模块
 define(
-  [module_id],
-  [dependence_module_a, dependence_module_b],
-  function(module_a, module_b){
+  ['module_id'],
+  ['jquery', 'dependence_module_b'],
+  function($, module_b){
     // do something with module_a, module_b
-
+    //
     // exports
     return {
       name : 'name',
@@ -25,3 +24,4 @@ require('jquery', function($){
 
 
 // B. requirejs
+// ajax + eval
