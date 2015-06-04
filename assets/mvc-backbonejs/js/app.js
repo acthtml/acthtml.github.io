@@ -4,37 +4,48 @@
 
 (function(){
 
-// 筛选
-var Tab = Backbone.model.extend({
-  defaults : {
-    index : 0,
-    city : 0,
-    type : 0,
-    age : 0
-  }
-})
-
-
-// 单条线路
-var Line = Backbone.model.extend({
-  defaults : function(){
-    return {
-      // 标题
-      title : '',
-      // 描述
-      description : '',
-      // 价格
+  // Line Model
+  var Line = Backbone.Model.extend({
+    defaults : {
+      name : '',
+      desc : '',
+      img : '',
+      type : '',
+      age : '',
+      days : '',
       price : 0,
-      // 城市
-      city : '',
-      // 游玩天数
-      days : 0
+      url : ''
+    },
+
+    initialize : function(){
+      this.url = this.getUrl();
+    },
+
+    // 获取对于的url
+    getUrl : function(){
+      return 'path-to-' + this.id + '.html';
+    },
+
+    parse : function(data){
+      return {
+        id : data.LineId,
+        name : data.LineMainTitle,
+        desc : data.WirelessTitle,
+        img : data.ImagePath,
+        type : data.SubTitle,
+        age : data.Description,
+        days : line.Days,
+        price : line.AmountDirect
+      };
+  })
+
+  // Lines Collection
+  var Lines = Backbone.Collection.extend({
+    model : Line,
+
+    parse : function(data){
+      return data.lineList;
     }
-  },
-  // 获取此线路的连接
-  getLink : function(){
-    return 'http://m.ly.com/selftrip/line/' + this.id + '/';
-  }
-});
+  })
 
 })();
