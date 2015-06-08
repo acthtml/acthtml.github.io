@@ -20,8 +20,6 @@ php、ruby、python也完全能胜任。再加上一些第三方插件，可以�
 git的基本原理在这里[Pro Git（中文版）](http://git.oschina.net/progit/)，这里我列
 一下基本用法，详细的需要在刚才提到的教程中找到。
 
-git 本地操作：
-
 - git status 查看当前分支的
 - git add 将内容添加的缓存区
 - git commit 将缓存区的内容添加在本地服务器
