@@ -20,24 +20,24 @@ php、ruby、python也完全能胜任。再加上一些第三方插件，可以�
 git的基本原理在这里[Pro Git（中文版）](http://git.oschina.net/progit/)，这里我列
 一下基本用法，详细的需要在刚才提到的教程中找到。
 
-- git status 查看当前分支的
-- git add 将内容添加的缓存区
-- git commit 将缓存区的内容添加在本地服务器
-- git branch 管理分支
-  - 创建分支 git branch <branch-name>
-  - 删除分支 git branch -D <branch-name>
-  - 删除远程分支 git push --delete <branch-name>
-- git checkout 切换分支/签出某个文件
-  - 切换分支 git checkout <branch-name>
-  - 在本地切换到远程分支 git checkout -b <local-branchname> <origin/remote_branchname>
-- git push 将本地服务器的内容推送的远程服务器
-  - 将本地修改推送到远程 git push（当push.default设置是matching则是把本地的
+- `git status` 查看当前分支的
+- `git add` 将内容添加的缓存区
+- `git commit` 将缓存区的内容添加在本地服务器
+- `git branch` 管理分支
+  - 创建分支 `git branch <branch-name>`
+  - 删除分支 `git branch -D <branch-name>`
+  - 删除远程分支 `git push --delete <branch-name>`
+- `git checkout` 切换分支/签出某个文件
+  - 切换分支 `git checkout <branch-name>`
+  - 在本地切换到远程分支 `git checkout -b <local-branchname> <origin/remote_branchname>`
+- `git push` 将本地服务器的内容推送的远程服务器
+  - 将本地修改推送到远程 `git push`（当push.default设置是matching则是把本地的
     所有分支都会推送到远程，simple则只把当前分支。）
   - 删除远程分支、标签
-- git pull 将远程服务器的内容拉到本地
+- `git pull` 将远程服务器的内容拉到本地
 - 标签管理
-  - 删除远程标签 git push origin --delete tag <tagname>
-  - 删除本地标签 git tag -d <tagname>
+  - 删除远程标签 `git push origin --delete tag <tagname>`
+  - 删除本地标签 `git tag -d <tagname>`
 
 
 ## git flow
