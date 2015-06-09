@@ -80,8 +80,8 @@ Xie:
 
 1. 脚本样式更新
   last.5.4.10.css => last.5.5.css
-  packages.1.1.css => packages.1.2.css
-  packages.1.1.js => packages.1.2.js
+  packages.1.1.css => packages.1.3.css
+  packages.1.1.js => packages.1.3.js
 
 2. 页面中两个部分添加了优惠信息 查看.discount_info
 
@@ -92,8 +92,8 @@ Xie:
 ## 下单页 http://10.1.40.186:8000/book-new.html
 
 1. 脚本样式更新
-  book.4.15.10.css => book.4.16.css
-  book.4.16.3.js => book.4.17.js
+  book.4.15.10.css => book.4.16.1.css
+  book.4.16.3.js => book.4.17.3.js
   追加 http://js.40017.cn/cn/min/??/cn/sl/book/new/booking_discount.js
 
 2. 页面中html的修改
@@ -108,7 +108,7 @@ Xie:
 
 1. 脚本样式更改
   order_list.4.18.css => order_list.4.19.css
-  order_list.1.3.js => order_list.1.4.js
+  order_list.1.3.js => order_list.1.5.js
 
 2. 订单列表接口修改 http://10.1.40.186:8000/ajax/order/list/normal.json
   添加 booking_discount 属性
