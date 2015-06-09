@@ -65,15 +65,15 @@ git的基本原理在这里[Pro Git（中文版）](http://git.oschina.net/progi
 
 下面是git flow的常用命令
 
-- git flow init 初始化，第一次用需要初始化
-- git flow feature start new-home 开始开发一个新特性，例如这里开发一个新首页，我
+- `git flow init` 初始化，第一次用需要初始化
+- `git flow feature start <feature-name>` 开始开发一个新特性，例如这里开发一个新首页，我
   命名为new-home，使用这个命令会自动新建一个名为feature/new-home的分支。
-- git flow feature finish new-home 新首页开发完毕，使用这条命令自动会将这条分支
+- `git flow feature finish <feature-name>` 新首页开发完毕，使用这条命令自动会将这条分支
   合并到develop分支，并且自动删除分支feature/new-home
-- git flow realse start 4.0 / git flow realse finish 4.0 开发到一定阶段就要发布
+- `git flow realse start <tag-name>` / git flow realse finish '<tag-name>' 开发到一定阶段就要发布
   到线上了。这条命令就是将develop分支合并到master分支，并且添加一个名为4.0的tag。
-- git flow hotfix start 4.0.1 线上需要修复bug，使用这条命令。这里会自动生成一条从
-  master上衍生而来的分支,名为hotfix/4.0.1。等你修复好之后，使用git flow hotfix finish 4.0.1 。
+- `git flow hotfix start <tag-name>` 线上需要修复bug，使用这条命令。这里会自动生成一条从
+  master上衍生而来的分支,名为hotfix/4.0.1。等你修复好之后，使用`git flow hotfix finish <tag-name>` 。
   git自动会将这条分支（hotfix/4.0.1）合并到master，并且给当前master添加一个名为
   4.0.1的tag。
 
