@@ -1,0 +1,131 @@
+/**
+ * @file qinzi/qinzi.css
+ *
+ * 亲子频道
+ */
+
+html{background: #f9f6ec;}
+body{-webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; -webkit-user-select: none; -moz-user-select: none;}
+.wrapper{max-width: 640px; margin: 0 auto;overflow: hidden;position: relative; padding-bottom: 35px;}
+
+.block-links{}
+.block-links h2{line-height: 35px; padding: 0 10px; font-size: 12px; color: #666;}
+.block-links ul{margin: 0 -4px 0 -1px;}
+.block-links ul li{ float: left;width: 25%; margin: 0 -1px -1px 0;}
+.block-links ul li a{display: block;height: 45px; text-align: center; line-height: 45px; color: #666; font-size: 14px; background: #f8f8f8; border: 1px solid #e6dbb6; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+
+/* main tab*/
+.tab{}
+.tab .tab-nav-wrapper{height: 44px; border-bottom: 1px solid #e6dbb6;background: #f9f6ec;}
+.tab .tab-nav-wrapper .tab-nav{}
+.tab .tab-nav-wrapper .tab-nav li:not(.tab-adorn){float: left;width: 33.3333%;height: 44px; line-height: 44px; color: #666; text-align: center;}
+.tab .tab-nav-wrapper .tab-nav li.active{color: #50b400;}
+.tab .tab-nav .tab-adorn{/*background: #ec6644;*/}
+.tab .tab-items .tab-item{display: none;}
+.tab .tab-items .tab-item.active{display: block;}
+.tab .tab-item-inner ul:empty{background: url(http://img1.40017.cn/cn/comm/images/cn/public/transparent_loading_v2.gif) no-repeat center 50px; min-height: 100px}
+.tab .no-data-loader .data-loader{display: none;}
+.tab .data-loader{background: none;}
+.tab .empty{text-align: center;line-height: 60px; color: #999;padding: 20px 10px;}
+.tab .empty a,
+.tab .empty img{display: block;width: 100%;}
+.tab .data-loader:empty{display: none;}
+.tab.tab-fixed{padding-top: 45px;}
+.tab.tab-fixed  .tab-nav-wrapper{position: fixed; top: 0;z-index: 2; border-bottom: none;}
+
+
+/* 昨日上新 */
+.tab .tab-item.active .filter-bar{display: block;}
+.filter-bar-wrapper{}
+.filter-bar-wrapper .filter-bar{display: none; position: fixed; width: 100%; bottom: 0; left: 0; background: rgba(80,180,0,.9); height: 35px;z-index: 30;}
+.filter-bar-wrapper .filter-bar > li{float: left;width: 33.333333%;line-height: 35px;text-align: center;}
+.filter-bar-wrapper .filter-bar > li:first-child{border:none;}
+.filter-bar-wrapper .filter-bar > li div{}
+.filter-bar-wrapper .filter-bar > li div:after{content: "";display: inline-block;width:7px;height:7px;border:1px solid #fff;margin:0 0 1px 5px;-webkit-transform: rotate(45deg);transform: rotate(45deg);border-left: none;border-top:none;}
+.filter-bar-wrapper .filter-bar > li div span{overflow: hidden;color: #fff; font-size: 12px; padding: 0 0 0 20px; background: url(http://img1.40017.cn/cn/sl/snapping/qinzi/filter-anchor.png?) no-repeat 0 center; background-size: 15px 15px;}
+.filter-bar-wrapper .filter-bar > li.type div span{background-image: url(http://img1.40017.cn/cn/sl/snapping/qinzi/filter-type.png?);}
+.filter-bar-wrapper .filter-bar > li.age div span{background-image: url(http://img1.40017.cn/cn/sl/snapping/qinzi/filter-age.png?);}
+.filter-bar-wrapper .filter-bar > li .dropdown{display: none;position: absolute; bottom: 35px; left: 0;width: 100%;background: #fff;padding: 0; text-align: left;}
+.filter-bar-wrapper .filter-bar > li .dropdown li{border-bottom: 1px solid #ddd;height: 40px;line-height: 40px;padding-left:15px; font-size: 12px;}
+.filter-bar-wrapper .filter-bar > li .dropdown li.active{color: #f63;position: relative;}
+.filter-bar-wrapper .filter-bar > li .dropdown li.active:after{position: absolute; right: 15px; top: 0; content: ""; display: block; width: 15px;height: 40px; background: url(http://img1.40017.cn/cn/sl/snapping/qinzi/right.png) no-repeat center center; background-size: 15px 10px;}
+.filter-bar-wrapper .filter-bar > li .dropdown li:last-child{border-bottom: none;}
+.filter-bar-wrapper.expanded .filter-bar > li.active div:after{-webkit-transform: rotate(-135deg);transform: rotate(-135deg);margin:0 0 -1px 5px;}
+.filter-bar-wrapper.expanded .filter-bar > li.active .dropdown{display: block;overflow-y:scroll;}
+.filter-bar-wrapper.expanded .filter-bar > li.active div{position: relative;}
+.filter-bar-wrapper.expanded .filter-bar > li.active div:before{content: "";display: block;width: 10px;height: 10px;background: #fff;border-top: 1px solid #dcdcdc;border-left: 1px solid #dcdcdc;position: absolute; left: 50%; margin:auto;top:-10px;-webkit-transform: rotate(45deg);transform: rotate(45deg)}
+.filter-bar-wrapper.expanded .filter-mask{position: fixed; top: 0; left: 0; bottom: 0; right: 0;background: rgba(0,0,0,.8); z-index: 2;}
+
+/* routers list */
+.routers-list{}
+.routers-list li{margin: 10px;}
+.routers-list li a{display: block; background: #fff; border-radius: 5px; overflow: hidden; box-shadow: 1px 1px 2px rgba(0,0,0,.1);}
+.routers-list li dl{position: relative;padding:0 0 5px;}
+.routers-list li dt{position: relative;margin-bottom: 5px;}
+.routers-list li dt img{display: block; width: 100%; min-height: 100px;}
+.routers-list li dt span{position: absolute; top: 10px; left: 10px; height: 20px; font-size: 12px; line-height: 20px; padding: 0 5px; color: #fff; background: rgba(0,0,0,.6); border-radius: 3px; overflow: hidden;}
+.routers-list li dd.name{margin: 0 10px 2px; line-height: 20px; font-size: 14px; color: #333;}
+.routers-list li dd.desc{margin: 0 10px 2px; line-height: 20px; font-size: 12px; color: #666;}
+.routers-list li dd.price{height: 24px; line-height: 24px; font-size: 12px; color: #f63; margin: 0 10px;}
+.routers-list li dd.price strong{font-size: 22px; font-weight: 500;}
+.routers-list li dd.anchor,
+.routers-list li dd.days{position: absolute; bottom: 10px; right: 10px; color: #666; font-size: 12px; height: 15px; line-height: 15px; padding: 0 0 0 15px; background: url(http://img1.40017.cn/cn/sl/snapping/qinzi/icon-clock.png) no-repeat 0 center; background-size: 10px 10px;}
+.routers-list li dd.anchor{right: 80px; background-image: url(http://img1.40017.cn/cn/sl/snapping/qinzi/icon-anchor.png);}
+
+.routers-empty{width: 280px; margin: 20px auto 10px; color: #333; line-height: 20px; font-size: 12px;}
+.routers-empty p{padding: 0 0 0 85px; background: url(http://img1.40017.cn/cn/sl/snapping/qinzi/empty.png?) no-repeat -10px 0; background-size: 90px 60px;}
+.routers-empty a{display: block; height: 40px; margin: 15px auto; width: 160px; line-height: 40px; background: #ff6600; font-size: 20px; color: #fff; text-align: center; border-radius: 5px;}
+
+/*return_top*/
+.return_top{position: fixed;bottom: 55px;right: 15px;display: none;width: 45px;height: 45px;z-index:15;background: url(http://img1.40017.cn/cn/sl/snapping/home/v3/icon_discover_young_top.png) 0 0 no-repeat;-webkit-background-size: 45px 45px;background-size: 45px 45px;}
+
+/*area*/
+.area-list,.presale-list{color: #333;}
+.area-lists{height: 40px;line-height: 40px;border-bottom:2px solid #fb8952; padding: 0 20px}
+.area-lists span{float: right;display: inline-block;width: 60px; text-align:  center;}
+.area-lists span.select{float: left;width: auto;text-align: left;}
+.area-lists span.select strong{font-weight: 500;background: #ff824a;padding: 4px 8px;border-radius: 5px;margin-left: 5px}
+.area-lists span.select em{}
+.area-lists span.active{color:  #ff824a}
+
+.area-content{padding-bottom: 10px;overflow-y: scroll;}
+.area-content p{padding: 10px;  position: relative;overflow: hidden;font-size: 11px;padding-left: 15px}
+.area-content p span{color: #5eb70f}
+.area-content ul{padding:0 10px}
+.area-content .hiddens{height: auto;overflow: hidden;}
+.area-content ul.fn-clear.hiddens li{border-bottom: none;}
+.area-content ul.fn-clear li{float: left;padding: 10px 15px ;border-bottom: 1px solid #ddd;}
+
+.area-content ul.citysel li{font-size: 16px;padding: 10px 15px ;}
+.area-content ul li.active span{color: #ff824a}
+.area-content ul li span{}
+.area-content.show{display: block;box-shadow: 0 5px 5px rgba(0,0,0,.3);}
+
+.home-pop-wrapper{background: none;}
+.home-pop-wrapper .ui-dialog-content{padding: 0;}
+.home-pop{min-height: 200px;}
+.home-pop img{display: block; width: 100%;}
+.home-pop .close{background-color: #fff; width: 44px; height: 44px; background: url(http://img1.40017.cn/cn/sl/snapping/home/chunjie/pop/close.png) no-repeat center center; background-size: 22px 22px; top: -20px; right: -20px;}
+
+.area-content .fn-title{height: 28px;line-height: 28px;font-size: 14px;padding-left: 25px;background:#eaedf2;}
+.area-content .fn-title.hotcity{padding-left: 15px;font-size: 11px;}
+.area-content .navcity{position: fixed;top: 20px;right: 3px;font-size: 12px;}
+.area-content .navcity a{color: #5eb70f;display: block;line-height: 24px;}
+.area-content .navcity span{display: block;text-align: center;margin-top: 1px}
+
+.module-page{z-index: 30;}
+
+/* 红包 */
+.red-packet{position: fixed; right: 10px; top: 50%; width: 60px; height: 60px; margin:-20px 0 0; background: url(http://img1.40017.cn/cn/sl/snapping/qinzi/red-packet.gif) no-repeat center center; background-size: 74px 78px;}
+.overlays{display: none;}
+.loading{background:#fff url(http://img1.40017.cn/cn/comm/images/cn/public/transparent_loading_v2.gif) no-repeat center center; height: 50px;}
+
+#redPacketPage{background: #fff1d2; z-index: 30;}
+#redPacketPage .top{background: #fff1d2 url(http://img1.40017.cn/cn/sl/snapping/qinzi/red-packet-bg.jpg) repeat-x 0 0; background-size: 58px 25px; z-index: 30; height: 24px; overflow: hidden; margin-bottom: 10px;}
+#redPacketPage h2{font-size: 14px; color: #e72d3a; line-height: 20px;padding: 0; text-align: center; margin:0 0 15px;}
+#redPacketPage .packet{width: 260px; height: 155px; background: url(http://img1.40017.cn/cn/sl/snapping/qinzi/packet.png) no-repeat center center; margin: 0 auto; background-size: 280px auto; text-align: center; position: relative; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 5px 40px 0;}
+#redPacketPage .packet strong{font-size: 30px; color: #d82e18; display: block; text-align: center; line-height: 40px; font-weight: 700;}
+#redPacketPage .packet p{font-size: 12px; color: #825913; line-height: 20px;}
+#redPacketPage .packet .btn{background: #ffd145; margin: 0 20px; position: absolute; bottom: 10px; width: 140px; height: 32px; color: #ac8100; line-height: 32px;}
+#redPacketPage .rules{font-size: 12px; line-height: 20px; color: #90661e; margin: 20px 20px 0;}
+#redPacketPage .rules ol li{list-style: decimal outside none; margin-left: 15px;}

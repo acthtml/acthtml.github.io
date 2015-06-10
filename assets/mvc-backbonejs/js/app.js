@@ -46,6 +46,32 @@
     parse : function(data){
       return data.lineList;
     }
-  })
+  });
 
+  // Line View
+  var LineView = Backbone.View.extend({
+    tagName : 'li',
+    template : _.template($('#line-template').html()),
+    events : {
+      'click' : 'go'
+    },
+    initialize : function(){
+      this.listenTo(this.model, 'change', this.render);
+    },
+
+    render : function(){
+      this.$el.html(this.template(this.model.toJSON()));
+      return this;
+    },
+
+    go : function(){
+      location.href = this.model.getUrl();
+    }
+  });
+
+  var AppView = Backbone.View.extend({
+
+  });
+
+  var App = new AppView
 })();

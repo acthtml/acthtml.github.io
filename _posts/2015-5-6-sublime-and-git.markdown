@@ -8,7 +8,7 @@ title:  "sublime 和 git"
 sublime编辑器做到了快、跨平台、可扩展，不仅仅可以作为前端的开发工具，其他开发像
 php、ruby、python也完全能胜任。再加上一些第三方插件，可以比拟IDE([插件的安装方法](https://sublime.wbond.net/installation))
 
-目前，我离不开的：
+目前，我离不开的插件就三个：
 
 - emment [快速书写html+css](http://blog.wpjam.com/m/emmet/)
 - HTML-CSS-JS-Pretty 格式化工具
