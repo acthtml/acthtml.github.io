@@ -48,13 +48,7 @@
     }
   });
 
-  var List = new Lines();
-
-  var o = {};
-  _.extend(o, Backbone.Events);
-  o.listenTo(List, 'add', function(e){
-    console.log(e);
-  });
-
-  List.fetch({page:2});
+  var Tab = Backbone.Model.extend({
+    defaults : {}
+  })
 })();
