@@ -84,3 +84,17 @@ PC抢购前期推的不顺利，没有完整走一遍，后边的架构都有大
 # 4.下周计划
 
 Backbone + requirejs 的完整demo和分享
+
+
+
+## 列表页城市异步 http://10.1.40.186:8000/ten_weekend/ten_weekend_v4.html
+
+1. js/css 刷新 ten_weekend.js/css
+2. 添加js配置
+   TCent.settings.ten_weekend.url.location
+
+   返回这样的数据
+   {
+      "id" : 226,
+      "name" : "苏州"
+   }
