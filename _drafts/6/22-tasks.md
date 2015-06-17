@@ -98,3 +98,13 @@ Backbone + requirejs 的完整demo和分享
       "id" : 226,
       "name" : "苏州"
    }
+
+
+## 下单完成页
+
+1.刷新complete.css,complete.js，添加图标。
+2.html中去掉“只提供一名出游即可”
+
+## 终页
+
+1. snapping.js,snapping.css 刷新

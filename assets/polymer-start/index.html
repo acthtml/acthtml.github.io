@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <title></title>
+  <meta name="description" content="">
+
+  <!-- Mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Chrome / Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="black">
+  <link rel="icon" href="icon.png">
+
+  <!-- Safari / iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png">
+
+  <!-- Web Components -->
+  <script>
+    if ('registerElement' in document
+    && 'createShadowRoot' in HTMLElement.prototype
+    && 'import' in document.createElement('link')
+    && 'content' in document.createElement('template')) {
+      // Native WC support. Do nothing
+    } else {
+      document.write('<script src="/bower_components/webcomponentsjs/webcomponents.js"><\/script>');
+    }
+  </script>
+  <link rel="import" href="/elements/test-element/test-element.html">
+</head>
+<body unresolved>
+    <test-element age="111"></test-element>
+</body>
+</html>

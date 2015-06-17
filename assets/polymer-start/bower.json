@@ -1,0 +1,19 @@
+{
+  "name": "polymer start",
+  "dependencies": {
+    "polymer": null
+  },
+  "version": "0.0.0",
+  "authors": [
+    "dh2297 <dh2297@ly.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "js/lib",
+    "test",
+    "tests"
+  ]
+}

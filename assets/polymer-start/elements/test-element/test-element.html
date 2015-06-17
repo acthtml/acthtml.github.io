@@ -1,0 +1,68 @@
+<link rel="import" href="/bower_components/polymer/polymer.html">
+
+<dom-module id="test-element">
+  <template>
+    <b>here:</b>
+    <content>{{author}}</content>
+  </template>
+
+  <script>
+    Polymer({
+      is : "test-element",
+      properties : {
+        age : Number,
+        name : {
+          type : String,
+          value : 'Dai Hua',
+          reflectToAttribute : true,
+          notify : true
+        },
+        shortName : {
+          type : String,
+          value : 'Dai',
+          reflectToAttribute : true,
+          notify : false
+        },
+        disabled : {
+          type : Boolean,
+          value : true,
+          reflectToAttribute : true
+        },
+        data : {
+          type : Object,
+          reflectToAttribute : true,
+          value : {
+            sex : 1,
+            address : 'aaaaaa',
+            skill : {
+              js : 3
+            }
+          },
+          notify : true
+        },
+        friends : {
+          type : Array,
+          value : function(){
+            return [];
+          }
+        }
+      },
+      observers : [
+        'dataChanged(data.skill.*)',
+        'friendsChanged(friends.splices)'
+      ],
+      dataChanged : function(data){
+        console.log(data);
+      },
+      friendsChanged : function(data){
+        console.log(data);
+      },
+      addFriend : function(){
+        this.push('friends', {name : 'Hello'})
+      },
+      dataMake : function(){
+        this.data.skill.js = 100;
+      }
+    })
+  </script>
+</dom-module>

@@ -71,7 +71,7 @@
     initialize : function(){
       var LinesList = new Lines;
       this.listenTo(LinesList, 'add', this.addOne);
-      LinesList.fetch();
+      LinesList.fetch({data : {page:1}});
     },
     addOne : function(line){
       var view = new LineView({
