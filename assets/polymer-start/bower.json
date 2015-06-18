@@ -1,7 +1,7 @@
 {
   "name": "polymer start",
   "dependencies": {
-    "polymer": null
+    "polymer": "Polymer/polymer#^1.0.0"
   },
   "version": "0.0.0",
   "authors": [
