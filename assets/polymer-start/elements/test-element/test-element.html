@@ -6,7 +6,7 @@
   </style>
   <template>
     <div id="box">{{message}}</div>
-    <div>{{ishover}}</div>
+    <p>[[name]]</p>
   </template>
 
   <script>
@@ -16,7 +16,12 @@
         x : Number,
         y : Number,
         message : String,
-        ishover : String
+        ishover : String,
+        name : {
+          type : String,
+          value : 'test.',
+          notify : false
+        }
       },
 
       listeners : {
