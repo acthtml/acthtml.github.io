@@ -34,7 +34,6 @@
 <!-- QQ应用模式 -->
 
 
-
 <!-- 允许二次分享 -->
 <script type="text/javascript" src="http://js.40017.cn/cn/min/??/touch/app/pub/public/share.js?v=2015031701"></script>
 <div style="display: none;">
@@ -60,3 +59,7 @@ html{
   filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
   filter:gray; /*ie9- */
 }
+
+
+<!-- 无线HB调用 -->
+http://10.1.200.37:8081/wrntest/jsp/all_navbar_test.html

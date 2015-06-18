@@ -1,67 +1,43 @@
 <link rel="import" href="/bower_components/polymer/polymer.html">
 
 <dom-module id="test-element">
+  <style>
+    #box{width: 300px;height: 100px; background: #f0f0f0;border: 1px solid #ddd; text-align: center; line-height: 100px; color: #333; font-size: 12px;position: absolute;left: 50%;top: 50%; margin: -50px 0 0 -150px}
+  </style>
   <template>
-    <b>here:</b>
-    <content>{{author}}</content>
+    <div id="box">{{message}}</div>
+    <div>{{ishover}}</div>
   </template>
 
   <script>
     Polymer({
       is : "test-element",
       properties : {
-        age : Number,
-        name : {
-          type : String,
-          value : 'Dai Hua',
-          reflectToAttribute : true,
-          notify : true
-        },
-        shortName : {
-          type : String,
-          value : 'Dai',
-          reflectToAttribute : true,
-          notify : false
-        },
-        disabled : {
-          type : Boolean,
-          value : true,
-          reflectToAttribute : true
-        },
-        data : {
-          type : Object,
-          reflectToAttribute : true,
-          value : {
-            sex : 1,
-            address : 'aaaaaa',
-            skill : {
-              js : 3
-            }
-          },
-          notify : true
-        },
-        friends : {
-          type : Array,
-          value : function(){
-            return [];
-          }
+        x : Number,
+        y : Number,
+        message : String,
+        ishover : String
+      },
+
+      listeners : {
+        'box.track' : 'printMessage'
+      },
+
+      printMessage : function(e){
+        switch(e.detail.state) {
+          case 'start':
+            this.message = 'Tracking started!';
+            break;
+          case 'track':
+            this.message = 'Tracking in progress... ' +
+              e.detail.x + ', ' + e.detail.y;
+            break;
+          case 'end':
+            this.message = 'Tracking ended!';
+            break;
         }
-      },
-      observers : [
-        'dataChanged(data.skill.*)',
-        'friendsChanged(friends.splices)'
-      ],
-      dataChanged : function(data){
-        console.log(data);
-      },
-      friendsChanged : function(data){
-        console.log(data);
-      },
-      addFriend : function(){
-        this.push('friends', {name : 'Hello'})
-      },
-      dataMake : function(){
-        this.data.skill.js = 100;
+
+        this.ishover = e.detail.hover().tagName;
       }
     })
   </script>

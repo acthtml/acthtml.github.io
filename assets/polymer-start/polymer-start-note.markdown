@@ -48,6 +48,11 @@ Polymer({
     ],
     // @see myPropery.observer
     myProperyChanged : function(new_value, old_value){
+    },
+    ready : function(){
+      this.addEventListener('myPropery-changed', function(e){
+        console.log('new value is ' + e.detail.value);
+      })
     }
   }
 })
