@@ -1,48 +1,37 @@
 <link rel="import" href="/bower_components/polymer/polymer.html">
+<link rel="import" href="/bower_components/iron-ajax/iron-ajax.html">
+<link rel="import" href="/bower_components/iron-behaviors/iron-button-state.html">
 
 <dom-module id="test-element">
-  <style>
-    #box{width: 300px;height: 100px; background: #f0f0f0;border: 1px solid #ddd; text-align: center; line-height: 100px; color: #333; font-size: 12px;position: absolute;left: 50%;top: 50%; margin: -50px 0 0 -150px}
-  </style>
   <template>
-    <div id="box">{{message}}</div>
-    <p>[[name]]</p>
+    <h2>test-element</h2>
+    <p>{{name}}</p>
+    <iron-ajax
+      url="/ajax/iron-ajax.html"
+      handle-as="json"
+      on-response="ajaxHandle" id="ajax"></iron-ajax>
   </template>
 
   <script>
     Polymer({
       is : "test-element",
       properties : {
-        x : Number,
-        y : Number,
-        message : String,
-        ishover : String,
         name : {
           type : String,
-          value : 'test.',
-          notify : false
+          value : 'parent'
         }
       },
 
-      listeners : {
-        'box.track' : 'printMessage'
+      ready : function(){
+        this.$.ajax.params = {
+          name : "Dai",
+          age : 11
+        }
+        this.$.ajax.generateRequest();
       },
 
-      printMessage : function(e){
-        switch(e.detail.state) {
-          case 'start':
-            this.message = 'Tracking started!';
-            break;
-          case 'track':
-            this.message = 'Tracking in progress... ' +
-              e.detail.x + ', ' + e.detail.y;
-            break;
-          case 'end':
-            this.message = 'Tracking ended!';
-            break;
-        }
-
-        this.ishover = e.detail.hover().tagName;
+      ajaxHandle : function(e){
+        console.log(e.detail.response)
       }
     })
   </script>
