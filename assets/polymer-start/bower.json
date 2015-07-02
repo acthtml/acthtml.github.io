@@ -2,7 +2,8 @@
   "name": "polymer start",
   "dependencies": {
     "polymer": "Polymer/polymer#^1.0.0",
-    "icon-elements" : "PolymerElements/iron-elements"
+    "icon-elements" : "PolymerElements/iron-elements",
+    "jquery" : null
   },
   "version": "0.0.0",
   "authors": [

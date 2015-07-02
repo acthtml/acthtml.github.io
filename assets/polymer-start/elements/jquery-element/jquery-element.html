@@ -1,0 +1,19 @@
+<link rel="import" href="/bower_components/polymer/polymer.html">
+
+<dom-module id="jquery-element">
+  <template>
+    <h1>我是标题h1</h1>
+    <h2>我是标题h2</h2>
+    <content></content>
+  </template>
+
+  <script>
+    Polymer({
+      is : 'jquery-element',
+      ready : function(){
+        $('h1').html('我是jquery-element的h1');
+        $('h2', this.root).html('我是jquery-element的h2');
+      }
+    });
+  </script>
+</dom-module>
