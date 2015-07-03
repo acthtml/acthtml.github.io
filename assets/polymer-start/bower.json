@@ -3,6 +3,7 @@
   "dependencies": {
     "polymer": "Polymer/polymer#^1.0.0",
     "icon-elements" : "PolymerElements/iron-elements",
+    "paper-elements" : "PolymerElements/paper-elements",
     "jquery" : null
   },
   "version": "0.0.0",
