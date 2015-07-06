@@ -12,5 +12,7 @@ js
 php
 - drupal
 
-
 正则表达式 http://www.w3school.com.cn/jsref/jsref_obj_regexp.asp
+
+
+查看目标行业的新生力量。[it桔子](http://itjuzi.com/)
