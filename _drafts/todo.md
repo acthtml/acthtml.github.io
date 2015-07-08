@@ -1,18 +1,22 @@
-to do sth.
+前端的todo列表
 
-js
-- Backbone.js
-- Underscore.js
-- requrejs,commonjs
-- grunt,bower,Yeoman
-- JSLint
-- unit test, JQunit
-- polymer
-
-php
-- drupal
-
-正则表达式 http://www.w3school.com.cn/jsref/jsref_obj_regexp.asp
-
-
-查看目标行业的新生力量。[it桔子](http://itjuzi.com/)
+- 模块化
+  - requirejs,backbone,react
+  - 重构pc和app
+- 单元测试（每个模块有对应的的单元测试。）
+- 开发文档（由注释导出文档，每个复杂的模块都应该有对应的demo用例。）
+- 自动化工具
+  - grunt,bower...
+  - 代码质量检测
+  - 自动单元测试
+  - 自动生成文档
+  - 自动合并，和部署（集成git，可自动发布到develop/product环境）
+- New UI（新的ui保证同时适用于各种平台）
+  - 材质设计[google meterial design](https://www.google.com/design/)
+  - 设计模式库（一套设计策划可以参考的已有的设计用例，例如下拉框的用法，pala pala）
+    [metrial design components](https://www.google.com/design/spec/components/cards.html)
+  - 前端UI
+    - [polymer](https://www.polymer-project.org)
+    - [meterial design lite](http://www.getmdl.io/)
+- 全平台支持（web, app）
+  - react native
