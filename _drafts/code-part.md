@@ -65,7 +65,6 @@ html{
 http://10.1.200.37:8081/wrntest/jsp/all_navbar_test.html
 
 
-
 <!-- 景区链接格式 -->
 Drupal.client.is ? 'http://shouji.17u.cn/internal/scenery/details/$id' : 'http://m.ly.com/scenery/scenerydetail_$id_0_0.html'
 <!-- 自助游链接格式 -->
