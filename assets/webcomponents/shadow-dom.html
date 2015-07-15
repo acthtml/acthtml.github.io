@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>shadow dom</title>
+  <style>
+    body{margin: 50px;}
+    /* ::shadow 伪类用来选中shadow dom */
+    input-range{display: block;}
+    input-range::shadow .wrapper{position: relative;height: 50px;}
+    input-range::shadow .bar{height:10px; background: #ccc; position: absolute; width: 100%; top: 50%; margin-top: -5px;}
+    input-range::shadow .circle{position: absolute; display: block; width: 50px; height: 50px; border-radius: 50px; left: 0; top: 50%; margin:-25px 0 0 -25px; background: #999; font: 18px/50px Arial; color: #fff; text-align: center;}
+    input-range::shadow .active .bar{background-color: #4caf50;}
+    input-range::shadow .active .circle{background-color: #ff6e40; cursor: pointer;}
+  </style>
+</head>
+<body>
+  <input-range></input-range>
+</body>
+</html>
+<script src="js/jquery.min.js"></script>
+<script src="js/shadow-dom.js"></script>

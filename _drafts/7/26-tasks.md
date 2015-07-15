@@ -6,8 +6,10 @@ title:  "第26周任务"
 # 戴华
 
   - [7.9, 7.10, 7.13] PC终页
+    55. 限时抢购的倒计时调下字体颜色，加粗 --陆翔、刘庆友
+    56. 把单供应商中“不含景点”/“不含酒店”等信息也放出来 --陆翔、刘庆友
     38. 将列表页的“今日可订”、周末有房的日期带到终页 --陆翔、刘庆友
-        - last.html packages.js, packages.css
+        - last.html packages.1.8.js, packages.1.5.css
         - list.html 添加 ?date=2015-07-12 ...
 
     43. 终页新增10元抢购入口  --陆翔、刘庆友
@@ -18,15 +20,13 @@ title:  "第26周任务"
 
             配置相应的js
             TCent.settings.router_snapping = {
+              show_days : [1,2,3], // 显示的日期，周一到周三。 一直显示为[0,1,2,3,4,5,6]
               url: '/ajax/last/router_snapping.html'
             }
 
         2. 异步获取的html
             http://10.1.148.80:8000/ajax/last/router_snapping.html
 
-    55. 限时抢购的倒计时调下字体颜色，加粗 --陆翔、刘庆友
-    56. 把单供应商中“不含景点”/“不含酒店”等信息也放出来 --陆翔、刘庆友
-        packages.1.7.js => packages.1.8.js
 
   - [7.14 ~ 7.17] PC动态打包
     32. PC终页动态打包 --陆翔、刘庆友

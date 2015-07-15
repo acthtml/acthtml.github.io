@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>custom element</title>
+  <style>
+    count-down{font:12px/20px "Microsoft Yahei";}
+    count-down h4{color: #333; font-weight: 600;margin: 0;}
+    count-down p{color: #f60;margin: 0 0 5px;}
+    count-down button{background: #f0f0f0; border: none; color: #666; height: 30px; line-height: 30px; border-radius: 5px;}
+
+    button[is=color-button]{margin: 20px 0; background: #f0f0f0; border: none; display: block; width: 200px; height: 100px; border-radius: 5px; text-align: center; font: 30px/100px "Microsoft Yahei"; color: #fff; text-shadow:1px 1px 1px rgba(0,0,0,.3);}
+  </style>
+</head>
+<body>
+  <input-range></input-range>
+  <button is="color-button"></button>
+  <count-down time="60000"></count-down>
+</body>
+</html>
+<script src="js/jquery.min.js"></script>
+<script src="js/custom-element.js"></script>
+<script src="js/color-button.js"></script>
+<script src="js/count-down.js"></script>
