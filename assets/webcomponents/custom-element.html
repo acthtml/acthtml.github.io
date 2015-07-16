@@ -10,11 +10,21 @@
     count-down button{background: #f0f0f0; border: none; color: #666; height: 30px; line-height: 30px; border-radius: 5px;}
 
     button[is=color-button]{margin: 20px 0; background: #f0f0f0; border: none; display: block; width: 200px; height: 100px; border-radius: 5px; text-align: center; font: 30px/100px "Microsoft Yahei"; color: #fff; text-shadow:1px 1px 1px rgba(0,0,0,.3);}
+
+    /* ::shadow 伪类用来选中shadow dom */
+    input-range{display: block; }
+    input-range::shadow .wrapper{position: relative;height: 50px;}
+    input-range::shadow .bar{height:10px; background: #ccc; position: absolute; width: 100%; top: 50%; margin-top: -5px;}
+    input-range::shadow .circle{position: absolute; display: block; width: 50px; height: 50px; border-radius: 50px; left: 0; top: 50%; margin:-25px 0 0 -25px; background: #999; font: 18px/50px Arial; color: #fff; text-align: center;}
+    input-range::shadow .active .bar{background-color: #4caf50;}
+    input-range::shadow .active .circle{background-color: #ff6e40; cursor: pointer;}
+    input-range::shadow ::content h1{font-size: 12px; position: absolute; top: -50px; font: 18px/50px Arial; text-align: center; width: 100%;}
   </style>
 </head>
 <body>
   <input-range></input-range>
-  <button is="color-button"></button>
+
+  <button is="color-button">变色按钮</button>
   <count-down time="60000"></count-down>
 </body>
 </html>
