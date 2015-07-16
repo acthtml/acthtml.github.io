@@ -280,7 +280,7 @@ js的模板语言很多，这个HTML5的原生规范，将模板dom通过``templ
 
 然后我们利用template改造上面的``input-range``demo。
 
-将要插入到shadow dom中的div全部抽离出来，放在``<template>``中。
+将要插入到shadow dom中的div全部抽离出来，放在``template``中。
 
 {% highlight html %}
 
