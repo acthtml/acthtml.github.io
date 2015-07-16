@@ -361,3 +361,11 @@ js的模板语言很多，这个HTML5的原生规范，将模板dom通过`<templ
 {% endhighlight %}
 
 点击这里查看完整的[html import demo](/assets/webcomponents/html-import.html)。
+
+
+## 相关参考
+
+- [custom element 规范](http://w3c.github.io/webcomponents/spec/custom/)
+- [How to Create Custom HTML Elements](http://blog.teamtreehouse.com/create-custom-html-elements-2)
+- [<template>](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/template)
+- [Introduction to HTML Imports](http://webcomponents.org/articles/introduction-to-html-imports/)
