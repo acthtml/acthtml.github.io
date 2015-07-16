@@ -248,13 +248,7 @@ title:  "web component 入门"
 
 并且需要改写样式书写规则，对shadow dom写样式需要使用`::shadow`这个伪类。
 
-{% highlight css %}
 
-  /* ::shadow 伪类用来选中shadow dom */
-  input-range::shadow .wrapper{position: relative;height: 50px;}
-  /* ... */
-
-{% endhighlight %}
 
 点击查看完整的[shadow dom的demo](/assets/webcomponents/shadow-dom.html)。
 
