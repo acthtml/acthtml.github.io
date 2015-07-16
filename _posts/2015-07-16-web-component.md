@@ -1,4 +1,7 @@
-# webcomponents
+---
+layout: post
+title:  "web component 入门"
+---
 
 今天我们来探讨下如何创建自定义的元素，这个元素有它自己的功能和交互，比如创建一个
 `<count-down>`标签，它可以实现倒计时功能。

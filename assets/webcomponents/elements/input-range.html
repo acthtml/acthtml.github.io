@@ -57,10 +57,9 @@
           this.min = parseInt($(this).attr('min') || 0);
           this.max = parseInt($(this).attr('max') || 100);
 
+          // @todo 这里元素的宽高取不到。
           this.left_boundary = this.bar.offset().left;
           this.right_boundary = this.left_boundary + this.bar.width();
-
-          console.log(this.bar.width());
 
           this.left = this.circle.offset().left || 0;
         },
@@ -119,14 +118,10 @@
           this._last_pagex = pageX;
           left = left + diff;
 
-          console.log({
-            actived : this.actived,
-            diff : diff,
-            left : left,
-            left_boundary : this.left_boundary,
-            right_boundary : this.right_boundary
-          })
-
+          // @todo 元素的宽高在html import环境下取不到。应该在custom element某个生命
+          // 周期应该能取到。
+          this.left_boundary = this.bar.offset().left;
+          this.right_boundary = this.left_boundary + this.bar.width();
 
           if(left < this.left_boundary || left > this.right_boundary){
             diff = 0;
