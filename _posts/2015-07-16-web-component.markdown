@@ -258,4 +258,116 @@ title:  "web component 入门"
 
 {% endhighlight %}
 
+点击查看完整的[shadow dom的demo](/assets/webcomponents/shadow-dom.html)。
 
+判断当前浏览器是否支持shadow dom可以利用当前dom中是否含有'createShadowRoot'方法。
+
+{% highlight javascript %}
+
+  if( 'createShadowRoot' in document.createElement('div')){
+    // 支持shadow root
+  }else{
+    // 不支持。
+  }
+
+{% endhighlight %}
+
+
+## template 模板标签
+
+js的模板语言很多，这个HTML5的原生规范，将模板dom通过``template``包裹，那么这些dom
+只有在用的时候才会对现有页面影响，里面的任何标签也只在用的时候进行解析。
+
+我们可以通过``template``标签的``content``属性获取template里的dom结构。
+
+然后我们利用template改造上面的``input-range``demo。
+
+将要插入到shadow dom中的div全部抽离出来，放在``template``中。
+
+{% highlight html %}
+
+  <template id="input-range">
+    <div class="wrapper">
+      <div class="bar"></div>
+      <div class="circle"></div>
+    </div>
+  </template>
+
+{% endhighlight %}
+
+然后改造创建shadow dom那一部分。
+
+{% highlight javascript %}
+
+  // 初始化html结构
+  initHTML : function(){
+    // create shadow root
+    var root = this.createShadowRoot();
+
+    // get template
+    var template = document.getElementById('input-range').content;
+    template = document.importNode(template, true);
+    root.appendChild(template);
+
+    this.wrapper = $('.wrapper', root);
+    this.bar = $('.bar', root);
+    this.circle = $('.circle', root);
+    this.circle.html(this.value);
+  },
+  // ...
+
+{% endhighlight %}
+
+好了，原生的tempalte就只有这么点功能。
+
+点击这里查看完整的[template demo](/assets/webcomponents/template.html)。
+
+## html import
+
+一个组件包含三样东西: html、css、js。我们引用组件的时候我们需要同时依赖引用这3样
+东西。css，js都可以利用``link[rel=stylesheet]``和``script``标签加载，
+但是html还有，所以w3c就定义了新的``link[rel=import]``标
+签，用来加载html片段。
+
+我们可以把组件相关的资源都放在一个独立的html，要用的时候引用进来。
+
+{% highlight html %}
+
+  <html lang="en">
+  <head>
+    <link rel="import" href="elements/input-range.html">
+  </head>
+  <body>
+    <input-range></input-range>
+  </body>
+  </html>
+
+{% endhighlight %}
+
+{% highlight html %}
+
+  <!-- elements/input-range.html -->
+
+  <style>
+    /* ... */
+  </style>
+
+  <tempalte>
+    <!-- ... -->
+  </tempalte>
+
+  <script>
+    // ...
+  </script>
+
+{% endhighlight %}
+
+点击这里查看完整的[html import demo](/assets/webcomponents/html-import.html)。
+
+
+## 相关参考
+
+- [custom element 规范](http://w3c.github.io/webcomponents/spec/custom/)
+- [How to Create Custom HTML Elements](http://blog.teamtreehouse.com/create-custom-html-elements-2)
+- [template](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/template)
+- [Introduction to HTML Imports](http://webcomponents.org/articles/introduction-to-html-imports/)
