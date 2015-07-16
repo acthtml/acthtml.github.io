@@ -258,19 +258,4 @@ title:  "web component 入门"
 
 {% endhighlight %}
 
-点击查看完整的[shadow dom的demo](/assets/webcomponents/shadow-dom.html)。
-
-判断当前浏览器是否支持shadow dom可以利用当前dom中是否含有'createShadowRoot'方法。
-
-{% highlight javascript %}
-
-  if( 'createShadowRoot' in document.createElement('div')){
-    // 支持shadow root
-  }else{
-    // 不支持。
-  }
-
-{% enhighlight %}
-
-
 
