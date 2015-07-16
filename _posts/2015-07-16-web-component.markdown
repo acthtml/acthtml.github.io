@@ -206,15 +206,15 @@ title:  "web component 入门"
 
 ## shadow dom
 
-上面的方法已经能很方便的仅仅通过一个标签使用相应的组件，并且无论这个标签是如何创建的，它都能准
-确的为它绑定相应的功能和交互，但是这样还不够好：
+上面的方法已经能很方便的仅仅通过一个标签使用相应的组件，并且无论这个标签是如何创
+建的，它都能准确的为它绑定相应的功能和交互，但是这样还不够好：
 
-- 它的引入会对页面的其他元素产生影响，在页面中添加了dom结构和对应的样式都可能对页面上的其他元
-  素产生影响。
+- 它的引入会对页面的其他元素产生影响，在页面中添加了dom结构和对应的样式都可能对
+  页面上的其他元素产生影响。
 - 其他元素的样式脚本也会对这个这个元素产生影响。
 
-我们要做的是完全屏蔽，就像``select``，``video``标签那样，要做到这样，我们必须将元素包含的内
-部节点不包含在dom tree中，这样就能完全屏蔽传统dom操作对它的影响了。
+我们要做的是完全屏蔽，就像``select``，``video``标签那样，要做到这样，我们必须将
+元素包含的内部节点不包含在dom tree中，这样就能完全屏蔽传统dom操作对它的影响了。
 
 那这些节点放在哪呢？dom节点下的shadow dom。
 
@@ -245,30 +245,4 @@ title:  "web component 入门"
   }
 
 {% endhighlight %}
-
-并且需要改写样式书写规则，对shadow dom写样式需要使用``::shadow``这个伪类。
-
-{% highlight css %}
-
-  /* ::shadow 伪类用来选中shadow dom */
-  input-range::shadow .wrapper{position: relative;height: 50px;}
-  /* ... */
-
-{% endhighlight %}
-
-点击查看完整的[shadow dom的demo](/assets/webcomponents/shadow-dom.html)。
-
-判断当前浏览器是否支持shadow dom可以利用当前dom中是否含有'createShadowRoot'方法。
-
-{% highlight javascript %}
-
-  if( 'createShadowRoot' in document.createElement('div')){
-    // 支持shadow root
-  }else{
-    // 不支持。
-  }
-
-{% enhighlight %}
-
-
 
