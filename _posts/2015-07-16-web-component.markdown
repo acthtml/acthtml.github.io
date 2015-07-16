@@ -349,15 +349,15 @@ js的模板语言很多，这个HTML5的原生规范，将模板dom通过``templ
   <!-- elements/input-range.html -->
 
   <style>
-    /* ... */
+    /* ... write here */
   </style>
 
   <tempalte>
-    <!-- ... -->
+    <!-- ... write here -->
   </tempalte>
 
   <script>
-    // ...
+    // ... write here
   </script>
 
 {% endhighlight %}
