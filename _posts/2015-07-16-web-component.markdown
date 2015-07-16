@@ -4,7 +4,7 @@ title:  "web component 入门"
 ---
 
 今天我们来探讨下如何创建自定义的元素，这个元素有它自己的功能和交互，比如创建一个
-`<count-down>`标签，它可以实现倒计时功能。
+``<count-down>``标签，它可以实现倒计时功能。
 
 要实现这个目标，我们需要使用web component（web组件）这种技术，这个技术包含4个内容：
 
@@ -15,7 +15,7 @@ title:  "web component 入门"
 
 ## custom element 自定义元素
 
-简而言之就是自定义元素标签，自定义元素的行为和交互。我们可以使用`document.registerElement(tag-name, tag-prototype)`
+简而言之就是自定义元素标签，自定义元素的行为和交互。我们可以使用``document.registerElement(tag-name, tag-prototype)``
 方法来自定义元素。
 
 {% highlight javascript %}
@@ -27,8 +27,8 @@ title:  "web component 入门"
 
 {% endhighlight %}
 
-接下来我们希望它跟原生的HTML标签一样，有`innerHTML`,`className`之类的属性，所以它
-的原型需要继承自`HTMLElement.prototype`。它还需要定义倒计时功能，并且我们希望它被
+接下来我们希望它跟原生的HTML标签一样，有``innerHTML``,``className``之类的属性，所以它
+的原型需要继承自``HTMLElement.prototype``。它还需要定义倒计时功能，并且我们希望它被
 创建的时候就开始倒计时，这一点我们可以利用自定义元素的生命周期来办到。
 
 {% highlight javascript %}
@@ -164,7 +164,7 @@ title:  "web component 入门"
 
 {% endhighlight %}
 
-上面是创造全新的元素，我们可以在注册的原型中设置`extends`属性，例如下面我们扩展`<button>`,
+上面是创造全新的元素，我们可以在注册的原型中设置``extends``属性，例如下面我们扩展``<button>``,
 每次点击按钮自动变色。
 
 {% highlight javascript %}
@@ -213,12 +213,12 @@ title:  "web component 入门"
   素产生影响。
 - 其他元素的样式脚本也会对这个这个元素产生影响。
 
-我们要做的是完全屏蔽，就像`<select>`，`<video>`标签那样，要做到这样，我们必须将元素包含的内
+我们要做的是完全屏蔽，就像``<select>``，``<video>``标签那样，要做到这样，我们必须将元素包含的内
 部节点不包含在dom tree中，这样就能完全屏蔽传统dom操作对它的影响了。
 
 那这些节点放在哪呢？dom节点下的shadow dom。
 
-我们可以通过`createShadowRoot`给一个dom创建一个shadow dom。
+我们可以通过``createShadowRoot``给一个dom创建一个shadow dom。
 
 {% highlight javascript %}
 
@@ -231,7 +231,7 @@ title:  "web component 入门"
 
 {% endhighlight %}
 
-接下来我们改造上面的`<input-range>`这个例子。
+接下来我们改造上面的``<input-range>``这个例子。
 
 {% highlight javascript %}
 
@@ -246,9 +246,15 @@ title:  "web component 入门"
 
 {% endhighlight %}
 
-并且需要改写样式书写规则，对shadow dom写样式需要使用`::shadow`这个伪类。
+并且需要改写样式书写规则，对shadow dom写样式需要使用``::shadow``这个伪类。
 
+{% highlight css %}
 
+  /* ::shadow 伪类用来选中shadow dom */
+  input-range::shadow .wrapper{position: relative;height: 50px;}
+  /* ... */
+
+{% endhighlight %}
 
 点击查看完整的[shadow dom的demo](/assets/webcomponents/shadow-dom.html)。
 
@@ -267,14 +273,14 @@ title:  "web component 入门"
 
 ## template 模板标签
 
-js的模板语言很多，这个HTML5的原生规范，将模板dom通过`<template>`包裹，那么这些dom
+js的模板语言很多，这个HTML5的原生规范，将模板dom通过``<template>``包裹，那么这些dom
 只有在用的时候才会对现有页面影响，里面的任何标签也只在用的时候进行解析。
 
-我们可以通过`template`标签的`content`属性获取template里的dom结构。
+我们可以通过``template``标签的``content``属性获取template里的dom结构。
 
-然后我们利用template改造上面的`input-range`demo。
+然后我们利用template改造上面的``input-range``demo。
 
-将要插入到shadow dom中的div全部抽离出来，放在`<template>`中。
+将要插入到shadow dom中的div全部抽离出来，放在``<template>``中。
 
 {% highlight html %}
 
@@ -317,8 +323,8 @@ js的模板语言很多，这个HTML5的原生规范，将模板dom通过`<templ
 ## html import
 
 一个组件包含三样东西: html、css、js。我们引用组件的时候我们需要同时依赖引用这3样
-东西。css，js都可以利用`<link rel="styles" href=""/>`和`<script src="">`标签加载，
-但是html还有，所以w3c就定义了新的`<link rel="import" href="path-to-html.html">`标
+东西。css，js都可以利用``<link rel="styles" href=""/>``和``<script src="">``标签加载，
+但是html还有，所以w3c就定义了新的``<link rel="import" href="path-to-html.html">``标
 签，用来加载html片段。
 
 我们可以把组件相关的资源都放在一个独立的html，要用的时候引用进来。
