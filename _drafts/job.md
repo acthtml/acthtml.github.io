@@ -2,7 +2,7 @@
 
 公司刚融资了35亿，要招人，待遇在苏州算可以的，内推的话，面试是稳的，其他得靠自己了。
 
-直接发送到dh2997[at]ly.com，然后抄送下acthtml[at]gmail.com
+直接发送到dh2997[at]ly.com，然后抄送下acthtml[at]gmail.com，文件格式为doc.
 
 下面这些职位都招：
 

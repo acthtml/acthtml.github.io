@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>template</title>
+  <style>
+    body{margin: 50px;}
+  </style>
+</head>
+<body>
+  <input-range><h1>input range</h1></input-range>
+
+  <template id="input-range">
+    <style>
+    /* ::shadow 伪类用来选中shadow dom */
+    :host{display: block; }
+    :host::shadow .wrapper{position: relative;height: 50px;}
+    :host::shadow .bar{height:10px; background: #ccc; position: absolute; width: 100%; top: 50%; margin-top: -5px;}
+    :host::shadow .circle{position: absolute; display: block; width: 50px; height: 50px; border-radius: 50px; left: 0; top: 50%; margin:-25px 0 0 -25px; background: #999; font: 18px/50px Arial; color: #fff; text-align: center;}
+    :host::shadow .active .bar{background-color: #4caf50;}
+    :host::shadow .active .circle{background-color: #ff6e40; cursor: pointer;}
+    :host::shadow ::content h1{font-size: 12px; position: absolute; top: -50px; font: 18px/50px Arial; text-align: center; width: 100%;}
+    </style>
+    <div class="wrapper">
+      <div class="bar"></div>
+      <div class="circle"></div>
+      <content select="*"></content>
+    </div>
+  </template>
+</body>
+</html>
+<script src="js/jquery.min.js"></script>
+<script src="js/template.js"></script>
