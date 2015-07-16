@@ -6,12 +6,15 @@ title:  "web component 入门"
 今天我们来探讨下如何创建自定义的元素，这个元素有它自己的功能和交互，比如创建一个
 ``input-range``标签，它可以实现一个类似``input:range``的功能。
 
-要实现这个目标，我们需要使用web component（web组件）这种技术，这个技术包含4个内容：
+要实现这个目标，我们需要注册自定义标签，给自定义标签添加样式和div，以及对应的行为。并且能够简
+便的引用这个自定义标签所需依赖的样式、脚本、和HTML。这几个需求正好对应下面四种技术：
 
 - custom element
 - shadow dom
 - template
 - html import
+
+这四种技术之后就是web component技术。接下来，我们依次了解下这4种技术。
 
 ## custom element 自定义元素
 
@@ -157,7 +160,8 @@ title:  "web component 入门"
           left : left + 'px'
         })
 
-        this.circle.html(this.min + Math.ceil((left - this.left_boundary) / (this.right_boundary - this.left_boundary) * (this.max - this.min)))
+        this.value = this.min + Math.ceil((left - this.left_boundary) / (this.right_boundary - this.left_boundary) * (this.max - this.min));
+        this.circle.html(this.value);
       }
     })
   })

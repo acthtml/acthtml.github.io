@@ -107,7 +107,8 @@
           left : left + 'px'
         })
 
-        this.circle.html(this.min + Math.ceil((left - this.left_boundary) / (this.right_boundary - this.left_boundary) * (this.max - this.min)))
+        this.value = this.min + Math.ceil((left - this.left_boundary) / (this.right_boundary - this.left_boundary) * (this.max - this.min));
+        this.circle.html(this.value);
       }
     })
   })
