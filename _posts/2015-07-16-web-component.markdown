@@ -246,3 +246,4 @@ title:  "web component 入门"
 
 {% endhighlight %}
 
+并且需要改写样式书写规则，对shadow dom写样式需要使用``::shadow``这个伪类。
