@@ -13,4 +13,17 @@ title:  "web component 入门"
 - template
 - html import
 
+## custom element 自定义元素
+
+简而言之就是自定义元素标签，自定义元素的行为和交互。我们可以使用``document.registerElement(tag-name, tag-prototype)``
+方法来自定义元素。
+
+{% highlight javascript %}
+
+  // 创建一个input-range的自定义函数
+  var InputRange = document.registerElement('input-range');
+  // 接下来可以像标签一样使用
+  document.appendChild(new InputRange);
+
+{% endhighlight %}
 
