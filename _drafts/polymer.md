@@ -25,14 +25,56 @@ polymer是google出品的基于[web component技术](/2015/07/16/web-component.h
 
 {% highlight html %}
 
+  <!-- index.html -->
+
   <!-- 引用web component基础框架 -->
   <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
   <!-- 引用想用的页面元素 -->
-  <link rel="import" href="elements/super-button/super-button.html">
+  <link rel="import" href="super-button.html">
 
   <!-- 直接使用 -->
   <super-button>A Super Button</super-button>
 
 {% endhighlight %}
 
-## 用polymer自定义元素
+3. 使用polymer自定义元素。
+
+{% highlight html %}
+
+<!-- super-button.html -->
+<dom-module id="super-button">
+  <!-- style here -->
+  <style>
+    :host{display: block;}
+  </style>
+
+  <!-- template here -->
+  <template>
+    {{index}}
+  </template>
+
+  <!-- element registry here -->
+  <script>
+    Polymer({
+      is : 'super-button',
+      // 元素所带的属性
+      properties : {
+        index : {
+          type : Number,
+          value : 1
+        }
+      },
+      // 事件监听
+      listeners : [
+        'tap' : 'increaseIndex'
+      ],
+      increaseIndex : function(){
+        this.index ++;
+      }
+    })
+  </script>
+</dom-module>
+
+{% endhighlight %}
+
+## polymer 详解
