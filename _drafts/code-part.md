@@ -69,3 +69,7 @@ http://10.1.200.37:8081/wrntest/jsp/all_navbar_test.html
 Drupal.client.is ? 'http://shouji.17u.cn/internal/scenery/details/$id' : 'http://m.ly.com/scenery/scenerydetail_$id_0_0.html'
 <!-- 自助游链接格式 -->
 Drupal.client.is ? 'http://shouji.17u.cn/internal/selftrip/details/$id/?tcwebtag=v414v' : 'http://m.ly.com/selftrip/line/$id'
+
+<!-- 扫描地址 -->
+http://www.ly.com/zizhuyou/CreateTwoDimensionCode.aspx?id=http://m.17u.cn/client/qr/26902982/ + encodeURIComponent(selftrip|details|%id)
+http://www.ly.com/zizhuyou/CreateTwoDimensionCode.aspx?id=http://m.17u.cn/client/qr/26902982/ + encodeURIComponent(shouji.17u.cn|internal|selftrip|details|$id|?tcwebtag=v414v)
