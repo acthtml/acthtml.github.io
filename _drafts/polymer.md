@@ -21,17 +21,17 @@ polymer是google出品的基于[web component技术](/2015/07/16/web-component.h
 
 {% endhighlight %}
 
-2. 在页面中引用webcomponets框架，引用想用的页面元素，直接使用它。
+2. 在页面中引用webcomponets框架，用html import引用元素，直接使用它。
 
 {% highlight html %}
 
   <!-- 引用web component基础框架 -->
   <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
   <!-- 引用想用的页面元素 -->
-  <link rel="import" href="bower_components/paper-button/paper-button.html">
+  <link rel="import" href="elements/super-button/super-button.html">
 
   <!-- 直接使用 -->
-  <paper-button>A Button</paper-button>
+  <super-button>A Super Button</super-button>
 
 {% endhighlight %}
 

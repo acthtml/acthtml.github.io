@@ -134,3 +134,11 @@ http://172.16.2.38/hybrid/?p=236
 
 
 http://shouji.17u.cn/internal/share/weixin
+
+
+
+## 手机登陆
+
+if(!Drupal.client.mid){
+  location.href = Drupal.client.is ? 'http://shouji.17u.cn/internal/login/' : 'path-to-touch-login'
+}
