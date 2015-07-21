@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "polymer 技术介绍"
+title:  "polymer，谷歌出品的基于webcomponent的框架"
 ---
 
 polymer是google出品的基于[web component技术](/2015/07/16/web-component.html)的一个框
