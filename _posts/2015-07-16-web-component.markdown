@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "web component技术让你自定义html标签"
+title:  "web component 技术介绍"
 ---
 
 今天我们来探讨下如何创建自定义的元素，这个元素有它自己的功能和交互，比如创建一个

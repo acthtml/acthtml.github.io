@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "flexbox 适配多种客户端的弹性布局"
+title:  "flexbox 速查手册"
 ---
 css flexbox，一种弹性布局，实现页面根据宽高自动调节元素和间距的大小。
 
