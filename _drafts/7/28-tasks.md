@@ -10,8 +10,36 @@ title:  "第28周任务"
         2.在推荐理由顶部增加宣传图和星级专题链接
         3.行程推荐部分，按照快乐童心的标准写个代码的模板"
     11. PC终页动态打包
+
+  - done
+    红包数据
     30. PC涉及到点评的相关改动（还有一些小bug待修复）
     41. 终页新增10元抢购入口（位置调整到套餐下面，信息量多时加hover效果）
+
+  # 红包脚本事件
+
+    首、列、终
+    popover_redpacket.js => popover_redpacket.1.0.1.js
+
+    首页红包弹屏
+    redpacket-pop.js => redpacket-pop.1.0.1.js
+
+
+  # 列表页点评数据异步 http://10.1.148.80:8000/list.html
+
+    1. js
+      routers_list.4.2.js => routers_list.4.3.js
+
+    2. 异步
+      http://10.1.148.80:8000/ajax/list/comments-count.json?routerids=100,101,102
+
+    3. 添加js配置项
+      TCent.settings.commentsCount
+
+  #  终页新增10元抢购入口
+
+    router_snapping.5.5.js => router_snapping.5.5.1.js
+    router_snapping.5.5.css => router_snapping.5.5.1.css
 
 
 # 周倩
