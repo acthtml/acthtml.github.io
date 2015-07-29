@@ -7,14 +7,61 @@ title:  "第28周任务"
 
   - PC终页（除动态打包 7.23 ~ 7.24，动态打包 7.27 ~ 7.31）
     9.  1.终页“爸爸去哪儿3”标识位置调整,增加星级和说明
+          - 标示位置不能调，会挡住标题
+          - 添加相应的脚本样式
+            <link rel="stylesheet" href="http://css.40017.cn/cn/min/??/cn/sl/common/hotel_star.css" />
+            <script type="text/javascript" src="http://js.40017.cn/cn/min/??/cn/sl/common/hotel_star.js"></script>
+          - 添加 html见页面
+            终页 http://10.1.148.80:8000/last.html
+            列表页 http://10.1.148.80:8000/list.html
+
         2.在推荐理由顶部增加宣传图和星级专题链接
+
         3.行程推荐部分，按照快乐童心的标准写个代码的模板"
+          已提供给黄岛主，搞定。
+
     11. PC终页动态打包
 
   - done
     红包数据
     30. PC涉及到点评的相关改动（还有一些小bug待修复）
     41. 终页新增10元抢购入口（位置调整到套餐下面，信息量多时加hover效果）
+
+  ## pc 抢购添加日历
+    http://10.1.148.80:8000/last/last-snapping.html
+
+    1. js
+      - 升级到：
+        snapping.1.1.js
+        packages.1.10.js
+      - 追加 <script src="http://js.40017.cn/cn/min/??/cn/sl/last/new/snapping-calendar.js"></script>
+      - 添加配置项
+        TCent.settings.snappingCalender = {
+          url : {
+            calendar : '/ajax/last/snapping/calendar.json?'
+          }
+        }
+    2. 日历接口
+      http://10.1.148.80:8000/ajax/last/snapping/calendar.json?routerid=1000&packageid=1001&comedate=2015-08
+
+  ## app抢购 添加日历
+    http://10.1.148.80:8100/snapping.html?memberid=123
+
+    1. js,css 直接换成下面的
+      <link rel="stylesheet" href="http://css.40017.cn/cn/min/??/cn/sl/snapping/base.wxcard.css,/touch/public/tab/0.0.2/tab.css,/touch/public/slider/0.0.1/slider.css,/touch/public/dialog/0.0.1/dialog.css,/touch/public/page/0.0.1/page.css,/touch/public/calendar/0.0.3/calendar.css,/cn/sl/snapping/snapping.34.0.css,/cn/sl/snapping/snapping-permission.24.0.css?v=2015010806" />
+      <script type="text/javascript" src="http://js.40017.cn/cn/min/??/cn/sl/snapping/zepto.js,/touch/hb/c/bridge.1.1.0.js,/touch/public/tab/0.0.2/tab.js,/touch/public/slider/0.0.1/slider.js,/touch/public/dialog/0.0.1/dialog.js,/touch/public/page/0.0.1/page.js,/touch/public/calendar/0.0.3/calendar.js,/cn/sl/snapping/drupal.common.24.0.js,/touch/app/pub/public/getClientInfo.2.0.1.js,/cn/sl/snapping/snapping-permission.39.0.js,/cn/sl/snapping/snapping.39.0.js,/cn/sl/snapping/snapping-calendar.js,/cn/sl/snapping/favorites.33.0.js?v=2015061201"></script>
+
+    2. 添加js配置项
+      Drupal.settings.snappingCalendar
+
+    3. html
+      - <div class="page"> => <div id="mainPage">
+      - 抢购元素添加进度条：
+        .processbar-wrapper
+      - 抢购元素添加一些属性：
+        data-snapping-time-total="30000" 抢购总时间
+        data-discount="7.1" 抢购折扣
+    4. 日历接口跟pc一致。
 
   # 红包脚本事件
 
@@ -36,17 +83,15 @@ title:  "第28周任务"
     3. 添加js配置项
       TCent.settings.commentsCount
 
-  #  终页新增10元抢购入口
+  #  终页新增10元抢购入口，位置改动
 
     router_snapping.5.5.js => router_snapping.5.5.1.js
     router_snapping.5.5.css => router_snapping.5.5.1.css
-
 
 # 周倩
 
   - [7.23] 特卖新品诱惑专题
   - [7.24 ~ 7.27] 3. 小米生活独立投放专题 @卢茜
-
   - [7.28] 标签页
     29. 添加标签页A事件数据
     39. 标签页“其他城市”内首字母切换，手势图标由“光标”改为“手指”
@@ -101,6 +146,7 @@ title:  "第28周任务"
 
   1. 前端HTML,CSS，工具入门
   2. 使用html，css，独立完成一个静态页面。
+
 
 # 未分配
   - 后台直接开发
