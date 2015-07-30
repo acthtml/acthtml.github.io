@@ -31,5 +31,6 @@ Grunt,Bower,Yeoman
 React Native
 Nodejs
 
-
-
+react
+状态机
+flux,reflux
