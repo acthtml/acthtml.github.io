@@ -107,7 +107,7 @@ jsx一些注意点：
 
 例如下面，A、B两次打印的dom结构。
 
-{% highlighted html %}
+{% highlight html %}
 
   <!-- A -->
   <ul>
