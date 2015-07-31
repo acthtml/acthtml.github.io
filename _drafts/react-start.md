@@ -6,7 +6,7 @@ title:  "React 入门实践"
 ## 为什么React
 
 React 是 facebook 2013 年开源的前端框架，为了构建复杂的交互应用程序，大家通常把它
-理解成MVC中的V（视图层）。React具有这些优点：
+理解成MVC中的V（视图层）。React具有以下优点：
 
 - 使用可复用、可组合的组件来构建应用。
 - 当数据更新时，React会自动更新用户界面。
@@ -54,28 +54,27 @@ React是通过JSX语法来编写组件，通过组件来操作虚拟DOM，通过
 
 {% endhighlight%}
 
-下面详解涉及到的知识点：JSX语法，虚拟DOM，``props``配置组件，``state``状态机。
-
+下面进一步分析React涉及到的知识点：JSX语法，虚拟DOM，props，state。
 
 ## JSX语法
 
-JSX语法就是像编写XML那样编写js代码。灵感的来源是[web component技术](/2015/07/16/web-component.html)，
-通过web组件来实现代码的可复用、可组合，进而创建复杂的交互应用。但是实现原理不一样：
-web component 技术是利用``document.registerElement``来创建标签，通过shadow dom、
-template、html import来给对应的标签添加相应的行为事件；而JSX语法则是将XML标签直
-接换成对应的js语法，进而控制相应的DOM来实现组件。
+JSX语法能让你在js环境下，直接使用XML格式的语句来编辑js。其原理就是将每一个xml语句解析成一个
+js函数调用。所谓的组件就是每一个xml语句。
 
-在JSX语法环境中，你可以使用XML标签一样来使用组件：
+利用xml语句来表达组件的形式有点类似[web component 技术](/2015/07/16/web-component.html)，
+但实现原理不一样。web component技术利用``document.registerElement``来自定义标签，利用
+``shadow dom``、``template``来给自定义标签添加相应的行为交互，并用``html import``来整合
+这个标签所需的资源。
+
+在开头演示的例子里，jsx语法通过JSXTransformer将每个XML转换成相应的``React.createElement()``
+语句：
 
 {% highlight javascript %}
 
-  // 创建一个名为Nav的组件。
-  var Nav = React.createClass({ .... })
+  // jsx语句
+  <Avatar src="images/avatar.png" name="John" />
 
-  // 使用JSX语法
-  var mainNav = <Nav mode="main" />
-
-  // 经过JSXTransformer转换的js语句
-  var mainNav = React.createElement(Nav, {mode : 'main'})
+  // 对应的js语句
+  React.createElement(Avatar, {src : "images/avatar.png", name : "John"})
 
 {% endhighlight %}
