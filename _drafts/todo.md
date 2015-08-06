@@ -38,3 +38,12 @@ flux,reflux
 # 给它5分钟
 
 它挑战了很多传统知识，看起来很难理解，但是请给它5分钟。
+
+
+- todo demo
+- 最佳实践
+- flux,reflux
+- http://react-china.org/t/flux/615
+- direct.js, lodash.js
+- amd, commonjs
+- browserify
