@@ -29,7 +29,9 @@ React改变了编程模式，当然也改成了思维方式。我们来看看下
 有了结构，可以写每个组件了，然后创建一个静态版本。
 
 **2. 写每个组件，创建静态版本。**
+
 **3. 然后确定能代表整个UI的最小State。**
+
 **4. 确认state的生命周期。**
 
 最终的[demo](/assets/the-best-practice-of-react/index.html)
