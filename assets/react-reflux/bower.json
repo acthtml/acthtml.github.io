@@ -1,0 +1,7 @@
+{
+  "name" : "reflux",
+  "dependencies" : {
+    "react" : null,
+    "reflux" : null
+  }
+}
