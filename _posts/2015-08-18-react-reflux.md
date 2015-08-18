@@ -17,7 +17,7 @@ reflux将应用程序划分成3个部分：
 - **view components** 视图组件。
   根据仓库的数据渲染视图组件，还能发布相应的动作。
 
-{% hightlight HTML %}
+{% highlight HTML %}
 
 ╔═════════╗       ╔════════╗       ╔═════════════════╗
 ║ Actions ║──────>║ Stores ║──────>║ View Components ║
