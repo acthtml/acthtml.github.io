@@ -10,6 +10,7 @@
 - polymer 8500
 - admin 8600
 - admin-refer 8601
+- weixin 8700
 - heyleaf 9000
 - react 9100
 
