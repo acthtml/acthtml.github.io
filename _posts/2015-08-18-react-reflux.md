@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Reflux：基于React应用架构"
+title:  "Reflux：基于React的应用架构"
 ---
 
 React的设计目的是管理视图层，所以对于大型应用来说，我们还需要数据层面的复用。所以
