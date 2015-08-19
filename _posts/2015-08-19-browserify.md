@@ -9,7 +9,7 @@ Nodejs以CommonJS标准管理依赖文件，但是浏览器环境不支持这种
 
 1. 安装browserify
 
-{% highlight shell %}
+{% highlight bash %}
 
 npm install -g browserify
 
@@ -17,7 +17,7 @@ npm install -g browserify
 
 2. 将包含``require("modules")``的文件打包成一个
 
-{% highlight shell %}
+{% highlight bash %}
 
 browserify app.js -o bundle.js
 
