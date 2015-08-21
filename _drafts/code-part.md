@@ -72,7 +72,7 @@ Drupal.client.is ? 'http://shouji.17u.cn/internal/selftrip/details/$id/?tcwebtag
 
 
 <!-- 扫描地址 -->
-http://www.ly.com/zizhuyou/CreateTwoDimensionCode.aspx?id=http://m.17u.cn/client/qr/26902982/ + encodeURIComponent(selftrip|details|%id)
+http://www.ly.com/zizhuyou/CreateTwoDimensionCode.aspx?id=http://m.17u.cn/client/qr/26902982/ + encodeURIComponent(selftrip|details|44887)
 http://www.ly.com/zizhuyou/CreateTwoDimensionCode.aspx?id=http://m.17u.cn/client/qr/26902982/ + encodeURIComponent(shouji.17u.cn|internal|selftrip|details|$id|?tcwebtag=v414v)
 
 
