@@ -3,8 +3,6 @@ layout: post
 title:  "ES6标准的模块化语法"
 ---
 
-## ES6标准的模块化语法
-
 相比CommonJS而言，ES6标准的模块化语法更加紧凑。
 
 下面是一个模块文件，moduleA.js
