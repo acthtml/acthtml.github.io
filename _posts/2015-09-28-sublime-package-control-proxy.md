@@ -6,9 +6,9 @@ title:  "sublime安装package control代理"
 sublime的package control的相关网络接口在国内不是很稳定，所以想到了利用shadowsocks
 作为代理。
 
-1. 安装[nodejs](https://nodejs.org/)
+## 1. 安装[nodejs](https://nodejs.org/)
 
-2. 安装[shadowsocks](https://www.npmjs.com/package/shadowsocks)
+## 2. 安装[shadowsocks](https://www.npmjs.com/package/shadowsocks)
 
 {% highlight bash %}
 
@@ -16,7 +16,7 @@ sublime的package control的相关网络接口在国内不是很稳定，所以�
 
 {% endhighlight %}
 
-3. 创建一个config.json， 设置shadowsocks配置
+## 3. 创建一个config.json， 设置shadowsocks配置
 
 {% highlight javascript %}
 
@@ -32,7 +32,7 @@ sublime的package control的相关网络接口在国内不是很稳定，所以�
 
 {% endhighlight %}
 
-4. 开启本地的shadowsocks客户端
+## 4. 开启本地的shadowsocks客户端
 
 {% highlight bash %}
 
@@ -40,11 +40,11 @@ sublime的package control的相关网络接口在国内不是很稳定，所以�
 
 {% endhighlight %}
 
-5. sublime安装[package control](https://packagecontrol.io/)。你可以[下载本地文档](/assets/sublime-package-control-proxy/Package Control.rar)，
+## 5. sublime安装[package control](https://packagecontrol.io/)。你可以[下载本地文档](/assets/sublime-package-control-proxy/Package Control.rar)，
   解压缩到sublime选项``preferences > browse packages``对应的目录，然后重启sublime，
   即安装完成了package control。
 
-6. 配置sublime的package control的网络代理。打开package control的配置选项``preferences > package settings > package control > settings - user``
+## 6. 配置sublime的package control的网络代理。打开package control的配置选项``preferences > package settings > package control > settings - user``
 
 {% highlight javascript %}
 
