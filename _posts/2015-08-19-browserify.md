@@ -7,7 +7,7 @@ Nodejs以CommonJS标准管理依赖文件，但是浏览器环境不支持这种
 做到服务器和浏览器代码同构的话，就需要将这些依赖文件打包，browserify就是这么一个
 工具，它使用起来非常简单。
 
-1. 安装browserify
+## 1. 安装browserify
 
 {% highlight bash %}
 
@@ -15,7 +15,7 @@ npm install -g browserify
 
 {% endhighlight %}
 
-2. 将包含``require("modules")``的文件打包成一个
+## 2. 将包含``require("modules")``的文件打包成一个
 
 {% highlight bash %}
 
