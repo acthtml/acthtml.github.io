@@ -40,7 +40,7 @@ sublime的package control的相关网络接口在国内不是很稳定，所以�
 
 {% endhighlight %}
 
-5. sublime安装[package control](https://packagecontrol.io/)。你可以下载本地文档，
+5. sublime安装[package control](https://packagecontrol.io/)。你可以[下载本地文档](/assets/sublime-package-control-proxy/Package Control.rar)，
   解压缩到sublime选项``preferences > browse packages``对应的目录，然后重启sublime，
   即安装完成了package control。
 
