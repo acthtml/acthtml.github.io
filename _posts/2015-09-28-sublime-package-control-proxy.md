@@ -10,7 +10,7 @@ sublime的package control的相关网络接口在国内不是很稳定，所以�
 
 2. 安装[shadowsocks](https://www.npmjs.com/package/shadowsocks)
 
-{% highlight shell %}
+{% highlight bash %}
 
   npm install -g shadowsocks
 
@@ -34,7 +34,7 @@ sublime的package control的相关网络接口在国内不是很稳定，所以�
 
 4. 开启本地的shadowsocks客户端
 
-{% highlight shell %}
+{% highlight bash %}
 
   sslocal
 
