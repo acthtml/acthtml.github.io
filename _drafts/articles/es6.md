@@ -68,3 +68,322 @@ const B; // SyntaxError: Unexpected token ;
 B = 'B';
 
 {% endhighlight %}
+
+
+# 解构赋值
+
+对于解构赋值，其实是一种模式匹配，只要等号两边模式相同，就能正确的匹配到值。
+
+{% highlight javascript %}
+
+var [a, b, c] = [1, 2, 3];
+// 与下面的等价
+// var a = 1, b = 2, c = 3;
+
+// 甚至更复杂的形式也能正确匹配
+var [foo, [[bar], baz]] = [1, [[2, 3], 4]];
+// var foo = 1, bar = [2, 3], baz = 4;
+
+var [...third] = [1, 2, 3];
+// var third = [1, 2, 3];
+
+// [head, ...tail] = [1, 2, 3];
+// var head = 1, tail = [2, 3];
+
+{% endhighlight %}
+
+除了普通变量，对象也能进行模式匹配。
+
+{% highlight javascript %}
+
+var {foo, baz} = {foo : 1, bar : 2, baz : 3};
+// 对象解构赋值时，变量和对象的key值相对应。
+// var foo = 1, baz = 3;
+
+{% endhighlight %}
+
+对于未匹配到值得变量，则值为``undefined``。
+
+{% highlight javascript %}
+
+var [a, b, c] = [1, 2, 3];
+// var a = 1, b = 2, c;
+
+var {foo, baz} = {foo : 1, bar : 2};
+// var foo = 1, baz;
+
+{% endhighlight %}
+
+因为``{}``有些时候可以解析成代码块，所以在对象解构赋值的时候，避免与变量声明关键
+词``var``、``let``、``const``换行。
+
+{% highlight javascript %}
+
+var x;
+{x} = {x:1}; // SyntaxError
+
+// 只有不将大括号写在行首就能解决
+({x}) = {x : 1};
+
+{% endhighlight %}
+
+
+# 模板字符串
+
+模板字符串是用反引号（``\```）包裹的字符串，这种形式的字符串支持多行和嵌入变量。
+
+{% highlight javascript %}
+
+var name = 'John',
+    age = 18,
+    hello = `My name is ${name},
+      I'm ${age}`;
+
+console.log(hello);
+
+{% endhighlight %}
+
+
+# 数组的扩展
+
+``Array.from()``将类似于数组的对象（例如DOM树）或者可遍历的对象（例如Set、Map数据
+格式）转换成数组。
+
+{% highlight javascript %}
+
+var set = new Set([1, 2, 3, 1, 2, 3]);
+console.log(Array.from(set));
+
+{% endhighlight %}
+
+``Array.of()``将一组数值转换成数组，弥补数组构造函数的不足。
+
+{% highlight javascript %}
+
+new Array(3);
+// [undefined × 3];
+
+Array.of(1, 2, 3);
+// [1, 2, 3];
+
+{% endhighlight %}
+
+其他还有这些方法，不一一赘述。
+
+- ``.find()``
+- ``.findIndex()``
+- ``fill(value [,start [,end]])``
+- ``.entries()``
+- ``.keys()``
+- ``values()``
+
+
+# 函数的扩展
+
+参数支持设置默认值。
+
+{% highlight javascript %}
+
+function say(word = 'hello'){
+  console.log(`say ${word}`);
+}
+
+say();
+// say hello
+
+{% endhighlight %}
+
+支持reset参数（...变量名）。
+
+{% highlight javascript %}
+
+function add(a, ...b){
+  console.log(b);
+}
+
+add(1,2,3,4,5);
+// [2, 3, 4, 5]
+
+{% endhighlight %}
+
+支持扩展运算符。
+
+{% highlight javascript %}
+
+function add(a, ...b){
+  console.log(Array.of(...b));
+}
+
+add(1,2,3,4,5);
+// [2, 3, 4, 5]
+
+{% endhighlight %}
+
+支持箭头函数。
+
+{% highlight javascript %}
+
+var f = v => v;
+// 等价于
+var f = function(v){
+  return v;
+}
+
+{% endhighlight %}
+
+箭头函数的左边则是函数的参数，右边则是函数的返回值。如果回调函数超过一样，则用``{}``
+包裹。
+
+使用箭头函数有两个优势：
+
+- 简化回调函数。
+- 自动绑定``this``。
+
+当然它也有使用注意点：
+
+- 一定要指定返回值。
+- 不能使用``new``关键词。
+- 不能使用``arguments``关键词。
+
+
+# Set和Map数据格式
+
+Set跟数组类似，只不过Set格式中的每个值都不能相等。Set本身就是构造函数。
+
+{% highlight javascript %}
+
+var sets = new Set([1,2,2,3]);
+// [1, 2, 3]
+
+sets.add(4);
+// [1, 2, 3, 4]
+
+sets.add(1);
+// [1, 2, 3, 4]
+
+{% endhighlight %}
+
+Map则是类似于对象的键值对组合，普通的对象只允许字符串作为键名，而Map则可以是任意
+值类型。
+
+{% highlight javascript %}
+
+var map = new Map();
+map.set(1, {});
+map.set({}, 2);
+
+{% endhighlight %}
+
+
+# Iterator遍历器和 for...of 循环
+
+Iterator遍历器其实是一种协议，部署这种协议的对象都可以是Iterator遍历器。
+
+该协议规定对象需要一个``next()``方法，返回一个对象，包含``value``和``done``两个属
+性。其中``value``则为该次遍历返回的值，``done``则是布尔值，指出遍历是否已结束。
+
+Iterator遍历器都内被 for...of循环遍历。
+
+for...of循环是为数组、Set、Map、对象统一循环遍历格式而定义的。
+
+{% highlight javascript %}
+
+var count = {
+  i : 0,
+  next : function(){
+    return {
+      value : i++,
+      done : i > 100 ? true : false
+    }
+  }
+}
+
+for(i of count.next()){
+  console.log(i);
+}
+
+{% endhighlight %}
+
+
+# Generator函数
+
+Generator函数其实是一个内部状态遍历器，每次可以执行函数的一段，下次执行时，再接着
+执行下去。它有两个特征：
+
+1. 关键词``function``后紧跟星号（``*``）
+2. 函数体内有关键词``yield``来指定阶段性的返回值。
+
+{% highlight javascript %}
+
+function* generator(){
+  yield 1;
+  yield 2;
+  return 3;
+}
+
+// 调用函数，得到遍历器
+var g = generator();
+console.log(g.next()); // 1
+console.log(g.next()); // 2
+console.log(g.next()); // 3
+
+{% endhighlight %}
+
+
+# Promise对象
+
+Promise设计的初衷就是将异步的操作用同步的写法表示出来，避免层层嵌套。
+
+{% highlight javascript %}
+
+var p = new Promis((resolve, reject) => {
+  if(true){
+    resolve(value);
+  }else{
+    reject(value);
+  }
+})
+
+p.then( v => {
+  // succss;
+}, v => {
+  // error;
+})
+
+也能这么写
+p.then(v => {
+  // success
+}).catch( e => {
+  // error
+})
+
+{% endhighlight %}
+
+Promise对象有三个状态 pending, resolved, rejected。
+
+# async函数
+
+async取代回调函数的写法，只要在``function``声明``async``则表明该函数有异步操作，
+配合关键词``await``使用。
+
+{% highlight javascript %}
+
+function timeout(){
+  return new Promise((resolve, reject) => {
+    setTimeout(() => resolve(1), 1000);
+  })
+}
+
+async function countdown(){
+  var i = await timeout();
+  console.log(i);
+}
+
+{% endhighlight %}
+
+
+# class 和 module
+
+关键词 class, extends, construct, super
+
+export, default, import
