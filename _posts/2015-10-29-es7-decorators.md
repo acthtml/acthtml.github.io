@@ -21,8 +21,8 @@ function readonly(target, key, decriptor){
 }
 
 class Person {
-  @readonly,
-  name : 'John',
+  @readonly
+  name = 'John';
   sayHello(){
     console.log(`Hello, I'm ${this.name}`);
   }
