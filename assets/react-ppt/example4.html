@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JSX Tips</title>
+</head>
+<body>
+  <!-- 引用React,和将JSX语法转换成标准js的JSXTransformer -->
+  <script src="bower_components/react/react.js"></script>
+  <script src="bower_components/react/JSXTransformer.js"></script>
+
+  <div id="wrapper"></div>
+  <div id="wrapper2"></div>
+
+  <script type="text/jsx">
+  // 1. 自定义属性
+  var CustomAttr = React.createClass({
+    render : function(){
+      return (
+        <div custom-attr="some data" data-some-attr="some data">
+          custom attr
+        </div>
+      )
+    }
+  })
+  React.render(<CustomAttr />, document.getElementById('wrapper'))
+
+  // 2. input,select,textarea
+  // selected, value, checked, onchanged
+  var FormItems = React.createClass({
+    render : function(){
+      return (
+        <div>
+          <input type="text" value="input text"/>
+          <input type="checkbox" checked="checked"/>
+          // <select>
+          //   <option value="-1">请选择数字</option>
+          //   <option value="0">0</option>
+          //   <option value="1" selected>1</option>
+          //   <option value="2">2</option>
+          //   <option value="3">3</option>
+          //   <option value="4">4</option>
+          //   <option value="5">5</option>
+          // </select>
+        </div>
+      );
+    }
+  })
+  React.render(<FormItems />, document.getElementById('wrapper2'))
+
+  // 3. 如何解决
+  // - defaultValue
+  // - state && onChange
+  </script>
+</body>
+</html>

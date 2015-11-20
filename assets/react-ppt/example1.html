@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>First Touch 1</title>
+  <style>
+    .avatar{padding: 10px; background: #f5f5f5; display: inline-block;}
+    .avatar h3{ font:14px/20px "Microsoft Yahei";text-align: center;}
+  </style>
+</head>
+<body>
+  <!-- 引用React,和将JSX语法转换成标准js的JSXTransformer -->
+  <script src="bower_components/react/react.js"></script>
+  <script src="bower_components/react/JSXTransformer.js"></script>
+
+  <div id="wrapper"></div>
+
+  <script type="text/jsx">
+    // 通过script[type=text/jsx]标签可书写JSX语法的语句。
+
+    // 定义一个名为 Avatar 的组件，用于显示用户头像。
+    // 用户使用的使用只要配置头像图片和用户姓名可以重复使用。
+    var Avatar = React.createClass({
+      // 渲染组件对应的html结构。
+      render : function(){
+        return (
+          <div className="avatar">
+            <img src={this.props.src} alt={this.props.name} />
+            <h3>{this.props.name}</h3>
+          </div>
+        );
+      }
+    });
+
+    // 使用组件，插入到指定dom中，并且为组件配置属性 src 和 name，在组件内部可以通
+    // 过 this.props 对象访问对应的配置属性。
+    React.render(<Avatar src="images/avatars/avatar1.png" name="土豪" />, document.getElementById('wrapper'));
+  </script>
+</body>
+</html>

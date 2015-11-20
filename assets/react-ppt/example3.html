@@ -1,0 +1,28 @@
+<script type="text/jsx">
+  // #1 自定义的组件
+  // jsx语句
+  <Avatar src="images/avatar.png" name="John" />
+
+  // 对应的js语句
+  React.createElement(Avatar, {src : "images/avatar.png", name : "John"})
+
+  // #2 标准的html结构，对于标准的html结构，它其实调用了预定义的组件，列如下面的组件
+  // 名其实就是li。
+  // jsx语句
+  <li className="item">item</li>
+
+  // 对应的js语句
+  React.createElement(li, {className : 'item'});
+
+  // #3 复合结构
+  <div className="avatar">
+    <h3>avatar</h3>
+  </div>
+
+  // 对应的js语句
+  React.createElement(
+    div,
+    {className : 'avatar'},
+    React.createElement(li, null, 'avatar')
+  )
+</script>

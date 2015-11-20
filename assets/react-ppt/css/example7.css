@@ -1,0 +1,13 @@
+body{font: 14px/20px "Microsoft Yahei";}
+
+
+.todo{max-width: 300px; margin: 0 auto;}
+.todo-input {border: 1px solid #ddd; height: 40px; padding:10px; display: block; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+.todo-list ul{margin: 0; padding: 0;}
+.todo-list li{display: block; height: 20px;line-height: 20px; margin: 0;}
+.todo-list li span{float: left; width: 20px; text-align: center; color: #666;}
+.todo-list li input{float: left;}
+.todo-list li h3{margin:0 20px 0 40px; font-weight: 500;}
+.todo-list li a{float: right; color: #999;}
+.completed .todo-list li{color: #999;}
+.completed .todo-list li h3 span{text-decoration: line-through;}

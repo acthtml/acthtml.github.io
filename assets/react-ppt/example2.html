@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>First Touch 2</title>
+  <style>
+    .avatar{padding: 10px; background: #f5f5f5; display: inline-block;}
+    .avatar h3{ font:14px/20px "Microsoft Yahei";text-align: center;}
+
+    ul li{float: left; margin: 0 10px 10px;  list-style: none; }
+  </style>
+</head>
+<body>
+  <!-- 引用React,和将JSX语法转换成标准js的JSXTransformer -->
+  <script src="bower_components/react/react.js"></script>
+  <script src="bower_components/react/JSXTransformer.js"></script>
+
+  <div id="wrapper"></div>
+
+  <script type="text/jsx">
+    var Avatar = React.createClass({
+      // 渲染组件对应的html结构。
+      render : function(){
+        return (
+          <div className="avatar">
+            <img src={this.props.src} alt={this.props.name} />
+            <h3>{this.props.name}</h3>
+          </div>
+        );
+      }
+    });
+
+    var names_list = ['土豪', '邓佳鹏', '鲜肉', '郭庆伟', '何正婷', '胡旭阳', '陈虎', '周倩', '小阳'];
+    var AvatarList = React.createClass({
+      render : function(){
+        var list = names_list.map(function(name, i){
+          var src = 'images/avatars/avatar' + (i + 1) + '.png'
+
+          return (
+            <li>
+              <Avatar src={src} name={name} />
+            </li>
+          )
+        })
+        return (
+          <ul>
+            {list}
+          </ul>
+        )
+      }
+    })
+    React.render(<AvatarList />, document.getElementById('wrapper'));
+  </script>
+</body>
+</html>

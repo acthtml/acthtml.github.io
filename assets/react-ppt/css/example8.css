@@ -1,0 +1,5 @@
+
+#wrapper{max-width: 600px; margin: 0 auto;}
+.spinner{font: 40px/100px Arial;width: 100%; text-align: center;}
+.spinner span{padding: 0 20px;}
+.spinner strong{padding: 0 20px; background: #000; color: #fff;}

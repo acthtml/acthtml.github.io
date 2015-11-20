@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>State</title>
+  <style>
+    .avatar{padding: 10px; background: #f5f5f5; display: inline-block;}
+    .avatar h3{ font:14px/20px "Microsoft Yahei";text-align: center;}
+  </style>
+</head>
+<body>
+  <!-- 引用React,和将JSX语法转换成标准js的JSXTransformer -->
+  <script src="bower_components/react/react.js"></script>
+  <script src="bower_components/react/JSXTransformer.js"></script>
+
+  <div id="wrapper"></div>
+
+  <script type="text/jsx">
+    var SuperButton = React.createClass({
+      // 组件挂载前执行state初始化
+      getInitialState : function(){
+        return { index : 1 }
+      },
+      add : function(){
+        this.state.index ++;
+        this.setState(this.state);
+      },
+      render : function(){
+        return <button onClick={this.add}>{this.state.index}</button>
+      }
+    })
+
+    // 使用组件，插入到指定dom中，并且为组件配置属性 src 和 name，在组件内部可以通
+    // 过 this.props 对象访问对应的配置属性。
+    React.render(<SuperButton />, document.getElementById('wrapper'));
+  </script>
+</body>
+</html>
+
+
