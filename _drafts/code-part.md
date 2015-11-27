@@ -142,3 +142,7 @@ http://shouji.17u.cn/internal/share/weixin
 if(!Drupal.client.mid){
   location.href = Drupal.client.is ? 'http://shouji.17u.cn/internal/login/' : 'path-to-touch-login'
 }
+
+
+<!-- 通用字体 -->
+font-family:"Hiragino Sans GB W3","pingHei","WenQuanYi Micro Hei","Droid Sans Fallback","Microsoft YaHei",Arial,sans-serif;
