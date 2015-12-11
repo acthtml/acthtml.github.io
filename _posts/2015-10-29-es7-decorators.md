@@ -59,3 +59,6 @@ Person.sayHello();
 
 {% endhighlight %}
 
+参考：
+
+1. [Object.defineProperty()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)

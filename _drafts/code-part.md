@@ -146,3 +146,10 @@ if(!Drupal.client.mid){
 
 <!-- 通用字体 -->
 font-family:"Hiragino Sans GB W3","pingHei","WenQuanYi Micro Hei","Droid Sans Fallback","Microsoft YaHei",Arial,sans-serif;
+
+
+
+npm config set loglevel=http
+打开这个你会看到所有的 HTTP 请求，除此之外如果还有 \ 长时间打转，那就是外部模块的编译过程，一个字：等。
+
+支持rem单位 https://github.com/chuckcarpenter/REM-unit-polyfill
