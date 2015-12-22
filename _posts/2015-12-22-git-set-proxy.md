@@ -19,7 +19,7 @@ git config http.proxy http://user:pwd@server.com:port
 {% highlight text %}
 
 Host github.com *.github.com
-    ProxyCommand connect -H 127.0.0.1:1080 %h %p   #设置代理
+    ProxyCommand connect -H 127.0.0.1:1080 %h %p   #设置代理，此代理可以用shadowsocks实现。
     IdentityFile ~/.ssh/id_rsa
     User git
 
