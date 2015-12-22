@@ -3,7 +3,7 @@ layout: post
 title:  "字面量和原型的用法"
 ---
 
-假设我们需要构建一个页面，页面上有一个选项的模块，功能跟``input:radia``类似，代码
+假设我们需要构建一个页面，页面上有一个选项的模块，功能跟``input:radio``或``input:checkbox``类似，代码
 如下：
 
 {% highlight html %}
