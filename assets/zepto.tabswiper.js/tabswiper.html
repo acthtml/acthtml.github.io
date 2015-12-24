@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>zepto.tabswiper.js demo</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <link rel="stylesheet" href="tabswiper.css">
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  .tab-item div {
+    padding: 10px;
+    min-height: 600px;
+    background-image: -webkit-linear-gradient(to bottom, #fff, #000);
+    background-image: -o-linear-gradient(to bottom, #fff, #000);
+    background-image: linear-gradient(to bottom, #fff, #000);
+  }
+
+  .tab-item-3 {
+    height: 800px;
+  }
+
+  .tab-item-4 {
+    height: 400px;
+  }
+
+  .tab-item-5 {
+    height: 900px;
+  }
+  </style>
+</head>
+
+<body>
+  <div class="tab">
+    <div class="tab-nav-box">
+      <div class="tab-nav-wrapper">
+        <ul class="tab-nav">
+          <li>nav 1</li>
+          <li class="active">nav 2</li>
+          <li>nav 3</li>
+          <li>nav 4</li>
+          <li>nav 5</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tab-items-wrapper">
+      <div class="tab-items">
+        <div class="tab-item">
+          <div class="tab-item-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa voluptatem facere, reiciendis, sit eligendi unde doloribus voluptates explicabo voluptas, quidem qui provident quia sed aliquid eveniet distinctio beatae. Necessitatibus, nam?</div>
+        </div>
+        <div class="tab-item active">
+          <div class="tab-item-2">Commodi assumenda molestias dolorum quos beatae consequatur similique ullam, praesentium non esse voluptas hic sapiente, error quis quo, qui expedita dolore magnam officiis sequi quas mollitia ipsa totam impedit illum.</div>
+        </div>
+        <div class="tab-item">
+          <div class="tab-item-3">Laudantium, dolores, quisquam. Doloremque consequatur nesciunt placeat distinctio, alias quo. Ea atque sequi eaque fugit minus magnam laboriosam nulla necessitatibus molestiae, accusamus tempora, officia excepturi, ipsum rerum nesciunt dolore dolorem!</div>
+        </div>
+        <div class="tab-item">
+          <div class="tab-item-4">Illum minima soluta unde aliquid quia. Quo voluptates, reiciendis magnam fugiat numquam, veritatis vel, culpa ipsa perferendis cumque voluptatibus vero corporis ducimus! Ducimus in, suscipit sapiente culpa nulla facilis reprehenderit.</div>
+        </div>
+        <div class="tab-item">
+          <div class="tab-item-5">Qui ipsa ut, earum similique, nisi facere sed beatae facilis illum odio cupiditate, at ullam, ipsum eos expedita eveniet debitis ab veritatis repellat laboriosam quisquam maxime? Nisi reiciendis pariatur minus.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="zepto.js"></script>
+  <script src="tabswiper.js"></script>
+  <script>
+  var tabswiper = $('.tab').tabswiper({
+    // 初始化完成回调
+    afterInit: function(index, nav, item) {
+      console.log('tab 初始化完成，现选中第' + (index + 1) + '个');
+    },
+    // 选择之前回调
+    beforeSelect: function(index, nav, item) {
+      // true为可选，false为不可选
+      return true
+    },
+    // 选中之后回调
+    afterSelect: function(index, nav, item) {
+      console.log('tab已选中第' + (index + 1) + '个');
+    }
+  }).data('tabswiper');
+  </script>
+</body>
+
+</html>

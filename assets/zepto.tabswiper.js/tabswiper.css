@@ -1,0 +1,19 @@
+/**
+ * @file zepto.tabswiper.js/tabswiper.css
+ */
+/*tab*/
+.tab{position: relative;}
+.tab .tab-nav-box{position: relative;background: #353a41;}
+.tab .tab-nav-box:before{content: ""; position: absolute; width: 70px; height: 45px; background: #f60; display: block; left: 50%; top: 0; margin-left: -35px;}
+.tab.tab-nav-fixed{padding-top: 45px;}
+.tab.tab-nav-fixed .tab-nav-box{top: 0;position: static;width: 100%;position: fixed;z-index: 100;left: 0;right: 0;margin:auto;}
+.tab .tab-nav-wrapper{ z-index: 99999; color: #999; overflow-x:auto;}
+.tab .tab-nav-wrapper::-webkit-scrollbar {display: none;}
+.tab .tab-nav{height: 45px; width: 20000em; position: relative;left: 0;}
+.tab .tab-nav li{ display: block;position: relative;text-align: center; height: 45px; line-height: 45px; width: 70px; font-size: 12px;float: left;}
+.tab .tab-nav li.active{color: #fff; font-weight: 700; font-size: 14px;}
+
+.tab .tab-items-wrapper{min-height: 100px; width: 100%; overflow: hidden;}
+.tab .tab-items{position: relative;width: 1000%;}
+.tab .tab-item{float: left; width: 10%;}
+.tab .tab-item.active{}
