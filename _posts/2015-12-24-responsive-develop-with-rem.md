@@ -58,3 +58,4 @@ html {
 
 最后，对于不支持rem的可以使用脚本进行实时计算，页面中只要添加这个脚本[rem polyfill](https://github.com/chuckcarpenter/REM-unit-polyfill/tree/master/js)就行了。
 
+[demo](/assets/responsive-develop-with-rem/rem.html)

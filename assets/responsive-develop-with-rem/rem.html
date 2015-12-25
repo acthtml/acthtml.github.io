@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <title>rem template</title>
+  <!-- 是不支持rem的浏览器识别rem -->
+  <script type="text/javascript" src="/assets/lib/rem.min.js"></script>
+  <script>
+  // 使不支持样式表达式 calc 的浏览器获取正确的html font-size
+  document.documentElement.style.fontSize = window.innerWidth / 6.4 + "px";
+  </script>
+  <style>
+    /* 根据屏幕宽度动态计算 html font-size */
+    html {
+      font-size: calc(100vw/6.4)!important;
+      -webkit-text-size-adjust: none;
+    }
+
+    /* 大起来不太大 */
+    @media screen and (min-width: 640px) {
+      html {
+        font-size: calc(640px/6.4)!important;
+      }
+    }
+
+    /* 小起来不太小 */
+    @media screen and (max-width: 320px) {
+      html {
+        font-size: calc(320px/6.4)!important;
+      }
+    }
+
+    html,body{width: 100%;height: 100%;padding: 0; margin: 0;}
+    .wrapper{
+      background: #e7e9cd;
+      color: #000;
+       position: absolute;
+      left: .1rem;
+      right: .1rem;
+      top: .1rem;
+      bottom : .1rem;
+    }
+    .box{
+      width: 3.2rem;
+      height: 3.2rem;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin: -1.6rem 0 0 -1.6rem;
+      background: #5677fc;
+      color: #fff;
+      font-size: .12rem;
+      padding: .5rem .1rem .1rem;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+    .wrapper:before,
+    .box:before{
+      content: attr(class);
+      display: block;
+      height: .4rem;
+      background: #ff4081;
+      color: #fff;
+      padding: 0 0.2rem;
+      line-height: .4rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: .24rem;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="wrapper">
+  <div class="box">
+    <p>跟设计稿上的比例一致</p>
+  </div>
+</div>
+
+</body>
+
+</html>
