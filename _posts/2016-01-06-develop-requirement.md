@@ -1,0 +1,115 @@
+---
+layout: post
+title:  "前端岗位要求"
+---
+
+- 入门级/T1/T2（合理使用html，css，能避免绝大多数兼容性问题。能用jquery完成简单的交互需求。）
+  - html/css
+  - photoshop
+  - 浏览器端的js
+    - HTML DOM
+    - BOM
+  - jquery/zepto
+- 中级/T3/T4（对原生层面的js有一定理解，熟悉常用的库、框架，熟悉常用的设计模式，熟悉开发工具）
+  - js基础
+    - es5/es6
+    - 数据结构
+    - 类和对象
+    - 作用域、原型链
+  - 设计模式
+    - 字面量模式
+    - 构造函数模式/带有原型的构造函数模式
+  - HTML5/CSS3
+  - 前端基础库/基础框架
+    - jquery
+    - loadsh/underscore
+    - bootstrap
+  - 开发工具
+    - 编辑器
+      - sublime
+    - 调试工具
+      - chrome dev tools
+      - fiddler
+    - 版本控制
+      - git + git flow
+      - github/gitlab
+- 高级/T5/T6（有较高的代码质量，精通设计模式, 使用模块化、组件化构建项目。）
+  - 代码质量
+    - 代码规范（airbnb, google代码规范）
+      - [js](https://github.com/airbnb/javascript)
+      - [css](https://github.com/airbnb/css)
+  - 设计模式
+    - 字面量模式
+    - 构造函数模式/带有原型的构造函数模式
+    - 监听者模式
+    - 模块化模式
+    - MVC/MVVM...
+  - 组件化/模块化
+    - react/polymer/angularjs
+    - es6 module/commonjs/amd
+  - 服务器端的js
+    - nodejs
+    - 数据库
+      - MySQL
+      - MongoDB
+    - 数据缓存
+      - Redis
+      - Memcached
+    - 文件缓存/代理
+      - Varnish
+      - Squid
+    - 操作系统
+      - Unix/Linux/OS X/Windows
+    - 相关框架
+      - express
+  - app下的js
+    - react native
+    - phoneGap
+  - 交互式设计
+    - 需求分析
+    - 可用性、可访问性、可维护性、易用性
+    - 交互设计原型工具
+      - Axure
+    - 交互设计原理
+      - google material design
+- 前端架构师/T7/T8（能使团队多人协作，代码模块化组织的开发架构，减少前端开发边际工作，方便使开发人员把精力专注于业务逻辑本身实现。前端生成的工程化和发布自动化。）
+  - 团队协作
+    - 包管理
+      - npm/bower
+    - 预处理
+      - 模块化预处理
+        - webpack
+        - combo技术
+      - es6/jsx预处理
+        - babel
+    - 自动化测试
+      - 代码风格验证
+        - JSLint
+        - CSSLint
+        - Markup Validation Service
+        - HTML Validators
+      - 单元测试
+        - QUnit/Jasmine
+        - Mocha/Should/Chai/Expect
+        - Unit JS
+      - 性能测试
+        -《高性能的javascript》
+        - 性能分析
+    - 文档输出
+      - Dox/Doxmate/Grunt-Doxmate
+      - JSDoc
+    - 压缩合并
+      - Google Clousure Complier/ YUI Compressor
+    - 项目自动化构建
+      - grunt/gulp/fis
+    - 持续集成
+      - git ci
+  - 框架搭建（根据业务需求，设定或整合一套符合业务需求的，能够解决绝大多数业务场景的基础上，保持好良好的可扩展性以及良好的可维护性的Javascript框架或方案）
+- 前端管理leader（除了开发技能方面，还需要一些管理方面的经验和能力）
+  - 需求分析，提供解决方案和技术选型
+  - 开发管理
+    - 沟通能力，和产品经理、设计师以及后端等沟通、协调，分发任务。
+    - 开发需求跟进，代码review，代码合并与发布等
+    - 前端开发规范，开发文档、开发标准的建立和实施
+  - 新员工的培训、辅导
+  - 引导团队了解和学习新的技术
