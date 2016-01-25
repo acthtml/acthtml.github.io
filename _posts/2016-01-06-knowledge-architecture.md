@@ -20,6 +20,11 @@ title:  "前端知识架构"
     - 构造函数模式/带有原型的构造函数模式
     - 监听者模式
     - 模块化模式
+  - 代码规范（airbnb, google代码规范）
+    - [js](https://github.com/airbnb/javascript)
+    - [css](https://github.com/airbnb/css)
+  - 性能
+    - 《高性能的javascript》
   - 测试原理
   - 算法原理
   - 编译原理
@@ -45,22 +50,6 @@ title:  "前端知识架构"
   - 版本控制
     - git + git flow
     - github/gitlab
-- 代码质量
-  - 代码规范（airbnb, google代码规范）
-    - [js](https://github.com/airbnb/javascript)
-    - [css](https://github.com/airbnb/css)
-  - 代码风格验证
-    - JSLint
-    - CSSLint
-    - Markup Validation Service
-    - HTML Validators
-  - 单元测试
-    - QUnit/Jasmine
-    - Mocha/Should/Chai/Expect
-    - Unit JS
-  - 性能测试
-    -《高性能的javascript》
-    - 性能分析
 - 组件化/模块化
   - react/angularjs/polymer
   - es6 module/commonjs/amd
@@ -73,6 +62,17 @@ title:  "前端知识架构"
     - es6/jsx预处理
       - babel
   - 自动化测试
+    - 代码风格验证
+      - JSLint
+      - CSSLint
+      - Markup Validation Service
+      - HTML Validators
+    - 单元测试
+      - QUnit/Jasmine
+      - Mocha/Should/Chai/Expect
+      - Unit JS
+    - 性能测试
+      - 性能分析
   - 文档输出
     - Dox/Doxmate/Grunt-Doxmate
     - JSDoc
