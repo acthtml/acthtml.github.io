@@ -16,10 +16,10 @@ mongodb是采用分布式文件存储的非关系型数据库。关系型数据�
 安装结束，进入对应的`/bin`文件夹，运行命令，启动mongo服务器。
 
 ```
-// 启动mongodb服务器
+# 启动mongodb服务器
 mongod --dbpath=数据存放的文件夹
 
-// 连接数据库
+# 连接数据库
 mongodb://username:password@hostname:port/database-name
 ```
 
