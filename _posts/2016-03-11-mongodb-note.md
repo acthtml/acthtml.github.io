@@ -2,6 +2,7 @@
 layout: post
 title:  "mongodb笔记"
 ---
+{:toc}
 
 ## 1. NoSQL数据库与mongodb
 
