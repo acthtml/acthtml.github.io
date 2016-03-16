@@ -13,19 +13,19 @@ html，这些标签就不会被渲染。
 
 使用正则表达式。
 
-1. 获取`<link>`标签。
+**1.获取`<link>`标签。**
 
 ![获取`<link>`标签](/assets/regex-in-js/1.png)
 
-2. 提取`<link>`标签中的链接。
+**2.提取`<link>`标签中的链接。**
 
 ![提取`<link>`标签中的链接](/assets/regex-in-js/2.png)
 
-3. 提取`<style>`标签。
+**3.提取`<style>`标签。**
 
 ![提取`<style>`标签](/assets/regex-in-js/3.png)
 
-4. 提取`<style>`标签中的样式。
+**4.提取`<style>`标签中的样式。**
 
 ![提取`<style>`标签中的样式](/assets/regex-in-js/4.png)
 
