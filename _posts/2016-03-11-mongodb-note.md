@@ -3,8 +3,6 @@ layout: post
 title:  "mongodb笔记"
 ---
 
-{:toc}
-
 ## 1. NoSQL数据库与mongodb
 
 mongodb是采用分布式文件存储的非关系型数据库。关系型数据库采用SQL语句进行查询，数
