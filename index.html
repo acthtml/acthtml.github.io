@@ -12,7 +12,7 @@ layout: default
       <li>
         <span class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</span>
         <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{% index %}. {{ post.title }}</a>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ index }}. {{ post.title }}</a>
         </h2>
       </li>
     {% index ++%}
