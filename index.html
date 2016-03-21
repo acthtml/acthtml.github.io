@@ -7,13 +7,15 @@ layout: default
   <!-- <h1 class="page-heading">博文</h1> -->
 
   <ul class="post-list">
+    {% var index = 1;%}
     {% for post in site.posts %}
       <li>
         <span class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</span>
         <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{% index %}. {{ post.title }}</a>
         </h2>
       </li>
+    {% index ++%}
     {% endfor %}
   </ul>
 
