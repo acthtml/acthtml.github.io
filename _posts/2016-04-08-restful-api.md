@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "RESETful"
+title:  "RESTful"
 ---
 
-RESETful规范解读。
+RESTful规范解读。
 
 ### 1. URL
 
