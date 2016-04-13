@@ -16,7 +16,7 @@ npm install koa-router@next
 
 2. 使用
 
-```javascript
+```js
 var Koa = require('koa'),
     app = new Koa(),
     Router = require('koa-router'),
