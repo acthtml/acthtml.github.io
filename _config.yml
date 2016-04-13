@@ -8,4 +8,5 @@ url: "http://dai-hua.com" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
-
+redcarpet:
+    extensions: ["tables"]
