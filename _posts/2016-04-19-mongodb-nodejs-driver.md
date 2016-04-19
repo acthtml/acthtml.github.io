@@ -5,19 +5,19 @@ title:  "mongodb nodejs driver"
 
 ### install
 
-1. 安装node package
+- 安装node package
 
 ```bash
 npm install mongodb
 ```
 
-2. client
+- client
 
 ```js
 var MongoClient  = require('mongodb').MongoClient;
 ```
 
-3. connect
+- connect
 
 ```js
 MongoClient.connet(url, (err, db) => {
