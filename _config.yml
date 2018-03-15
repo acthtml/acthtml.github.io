@@ -4,7 +4,7 @@ email: acthtml[at]gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   一个简单的前端程序员笔记本
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://dai-hua.com" # the base hostname & protocol for your site
+url: "http://acthtml.com" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
