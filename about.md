@@ -1,13 +1,11 @@
 ---
 layout: page
-title: 关于
+title: About
 permalink: /about/
 ---
 
-dai hua
+Hi, I'm Matt.
 
-front end developer
-
-life@Suzhou
-
-work@ly.com
+- front end developer
+- life@Suzhou
+- work@cisco.com
